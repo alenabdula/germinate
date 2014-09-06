@@ -1,0 +1,22 @@
+/**
+ *  Links
+ */
+a {
+    background: transparent;
+    color: $html_link_color;
+    text-decoration: none;
+
+    &:visited {
+        color: $html_link_color_visited;
+    }
+
+    &:active {
+        color: $html_link_color_active;
+        outline: 0;
+    }
+
+    &:hover {
+        color:  $html_link_color_hover;
+        outline: 0;
+    }
+}

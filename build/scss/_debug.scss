@@ -1,0 +1,19 @@
+/**
+ *  Debug
+ */
+@if $debug == true {
+
+    html {
+        // Hi-Res Breakpoint
+        @include bp('bph') { background-color: #FF382F; }
+        // Custom Breakpoint
+        @include bp('custom', 2em) { background-color: #3694FF; }
+        // Default Breakpoints
+        @include bp('bp1') { background-color: #8829C2; }
+        @include bp('bp2') { background-color: #60C244; }
+        @include bp('bp3') { background-color: #E8B439; }
+        @include bp('bp4') { background-color: #E84D0C; }
+        @include bp('bp5') { background-color: #1AC27C; }
+    }
+
+}

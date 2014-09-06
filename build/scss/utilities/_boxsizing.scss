@@ -1,0 +1,8 @@
+/**
+ *  Boxsizing
+ */
+@if $box_sizing == true {
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+}

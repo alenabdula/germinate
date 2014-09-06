@@ -1,0 +1,15 @@
+/**
+ *  Layout
+ */
+
+.head {
+    @extend %clearfix;
+}
+
+.body {
+    @extend %clearfix;
+}
+
+.foot {
+    @extend %clearfix;
+}
