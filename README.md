@@ -1,3 +1,5 @@
 ##Germinate##
 
-UnOpinionated project starter template.
+UnOpinionated project starter boilerplate.
+
+Version: 0.0.1 Alpha

@@ -28,7 +28,7 @@ var browserSync = require('browser-sync');
 /* Google PageSpeed Insights */
 var psi = require('psi');
 var key = '';
-var url = 'http://fivestarmarket.net';
+var url = 'http://germinate.com';
 
 /* PageSpeed Insights, Mobile */
 gulp.task('mobile', function () {
@@ -55,9 +55,9 @@ gulp.task('desktop', function () {
 });
 
 /* SCSS */
-gulp.task('scss', function() {
+gulp.task('scss', function () {
     return sass('src/scss/app.scss', {style:'compressed'})
-        .on('error', function(err) {
+        .on('error', function (err) {
             console.error('Error!', err.message);
         })
         .pipe(autoprefixer('last 5 version'))
@@ -68,13 +68,13 @@ gulp.task('scss', function() {
 });
 
 /* JavaScript */
-gulp.task('javascript', function() {
+gulp.task('javascript', function () {
     return gulp.src([
             'src/javascript/vendor/**/*.js',
             'src/javascript/includes/**/*.js',
             'src/javascript/*.js',
         ])
-        .on('error', function(err) {
+        .on('error', function (err) {
             console.error('Error!', err.message);
         })
         .pipe(concat('app.js'))
@@ -93,11 +93,12 @@ gulp.task('images', function () {
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use:[pngquant()]}))
+        .pipe(rename({suffix:'.min'}))
         .pipe(gulp.dest('public/img'));
 });
 
 /* BrowserSync */
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
     browserSync({
         server: {
             baseDir: 'public',
@@ -113,7 +114,7 @@ gulp.task('browser-sync-reload', function () {
 });
 
 /* Watch */
-gulp.task('default', ['browser-sync'], function() {
+gulp.task('default', ['browser-sync'], function () {
     gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['scss']);
     gulp.watch(['src/javascript/*.js', 'src/javascript/**/*.js'], ['javascript']);
     gulp.watch(['public/*.html'], ['browser-sync-reload']);
