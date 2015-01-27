@@ -1,3 +1,6 @@
+//
+//  Germinate Build Script, Version 0.0.1 Alpha
+//
 /* Gulp */
 var gulp = require('gulp');
 
