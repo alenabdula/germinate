@@ -1,0 +1,15 @@
+html {
+    background: $html_background;
+    font-family: $html_font_family;
+    overflow-y: scroll;
+    min-height: 100%;
+    font-size: 62.5%;
+}
+body {
+    width: 100%;
+    margin: 0;
+    background-color: transparent;
+    line-height: $html_line_height;
+    color: $html_text_color;
+    font-size: $html_font_size;
+}

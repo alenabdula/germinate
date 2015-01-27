@@ -1,0 +1,56 @@
+//
+// Global Variables
+//
+$html_background: #f7f4f1;
+$html_text_color: #222222;
+$html_line_height: 1.6em;
+$html_font_family: serif;
+$html_font_size: 1.8rem;
+$html_link_color: #b6151a;
+$html_link_color_visited: #b6151a;
+$html_link_color_active: #b6151a;
+$html_link_color_hover: #b6151a;
+//
+//  Typography Variables
+//
+$headline_font_family: sans-serif;
+$h1_size: 3.9rem; // 39px
+$h2_size: 2.8rem; // 28px
+$h3_size: 2.1rem; // 21px
+$h4_size: 1.6rem; // 16px
+$h5_size: 1.2rem; // 12px
+$h6_size: 1rem;   // 10px
+//
+//  Responsive Breakpoints
+//
+$bp1: 30em;
+$bp2: 36em;
+$bp3: 48em;
+$bp4: 62em;
+$bp5: 86em;
+$bph: 1.5;
+//
+// Utilities
+//
+@import 'utilities/boxsizing';
+@import 'utilities/mixins';
+@import 'utilities/clearfix';
+@import 'utilities/viewport';
+//
+//  Base
+//
+@import 'base/site';
+@import 'base/resets';
+@import 'base/links';
+@import 'base/images';
+@import 'base/typography';
+@import 'base/elements';
+@import 'base/lists';
+@import 'base/tables';
+//
+//  Layouts and Grid
+//
+@import 'layout/grid';
+//
+//  Application Styles
+//
