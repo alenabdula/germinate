@@ -12,10 +12,10 @@ In order to use Gulp, our build system/script, you will need to install followin
 + Ruby ([Windows](http://rubyinstaller.org), [Linux/Mac](http://rvm.io))
   + Install [Sass Ruby Gem](https://rubygems.org/gems/sass) via terminal: `gem install sass -N` __'-N'__ flag is for no-documentation
 + Next, from root folder run following commands
-  +. `npm install -g gulp` installs Gulp globally
-  +. `npm install` installs our development dependencies from `composer.json` file.
-  +. And finally run `gulp` to start default Gulp task
-  +. To run Gulp tasks individually you would run `gulp <task name>` ex. `gulp images` would take all images from `src/images` folder, compressing and copying the minified version to our publicly accessible folder. In this case `public/img` folder.
+  + `npm install -g gulp` installs Gulp globally
+  + `npm install` installs our development dependencies from `composer.json` file.
+  + And finally run `gulp` to start default Gulp task
+  + To run Gulp tasks individually you would run `gulp <task name>` ex. `gulp images` would take all images from `src/images` folder, compressing and copying the minified version to our publicly accessible folder. In this case `public/img` folder.
 
 ###Inspired & Attributed###
 
