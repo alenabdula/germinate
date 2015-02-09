@@ -108,3 +108,31 @@
 
     @if $bp == 'bph'{ @media only screen and (-webkit-min-device-pixel-ratio: $bph), only screen and (min--moz-device-pixel-ratio: $bph), only screen and (min-device-pixel-ratio: $bph){ @content} }
 }
+/**
+ *  Folded Corners
+ *  Adopted from Lea Verou at http://codepen.io/leaverou/pen/raGaNR
+ *  Use as: @include folded_corner(#58a, 1.5em, 45deg);
+ */
+@mixin folded_corner($background, $size, $angle: 30deg) {
+  $x: $size / sin($angle);
+  $y: $size / cos($angle);
+  
+  position: relative;
+  background: $background;
+  background: linear-gradient($angle - 180deg, transparent $size, $background 0);
+  border-radius: .5em;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4)) 100% 0 no-repeat;
+    width: $y;
+    height: $x;
+    transform: translateY($y - $x) rotate(2*$angle - 90deg);
+    transform-origin: bottom right;
+    border-bottom-left-radius: inherit;
+    box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15);
+  }
+}
