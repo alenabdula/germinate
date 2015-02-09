@@ -100,11 +100,12 @@ gulp.task('images', function () {
 /* BrowserSync */
 gulp.task('browser-sync', function () {
     browserSync({
+        // Option 1
         server: {
             baseDir: 'public',
         },
+        // Option 2
         // proxy: "germinate.dev",
-        // open: false,
     });
 });
 
