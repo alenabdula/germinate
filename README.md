@@ -1,6 +1,6 @@
 ##Germinate##
 
-Small, flexible project boilerplate.
+Project Boilerplate, under development.
 
 ###Getting Started###
 
