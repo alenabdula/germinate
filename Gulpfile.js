@@ -8,6 +8,9 @@ var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
+/* Critical CSS */
+var critical = require('critical');
+
 /* Utilities */
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
@@ -17,6 +20,9 @@ var size = require('gulp-size');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var reporter = require('jshint-stylish');
+
+/* Notify */
+var notify = require('gulp-notify');
 
 /* Images */
 var imagemin = require('gulp-imagemin');
@@ -67,6 +73,32 @@ gulp.task('scss', function () {
         .pipe(size({title: 'Styles ==>'}));
 });
 
+/* Critical CSS */
+gulp.task('critical', function() {
+    critical.generateInline({
+        // Your base directory
+        base: './',
+        // HTML source
+        // html: '<html>...</html>',
+        // HTML source file
+        src: 'public/index.html',
+        // Your CSS Files (optional)
+        css: ['public/css/app.min.css'],
+        // Viewport width
+        width: 1300,
+        // Viewport height
+        height: 900,
+        // Target for final HTML output
+        // htmlTarget: 'index-critical.html',
+        // Target for generated critical-path CSS (which we inline)
+        styleTarget: 'public/css/critical.css',
+        // Minify critical-path CSS when inlining
+        minify: true,
+        // Extract inlined styles from referenced stylesheets
+        extract: true
+    });
+});
+
 /* JavaScript */
 gulp.task('javascript', function () {
     return gulp.src([
@@ -101,11 +133,11 @@ gulp.task('images', function () {
 gulp.task('browser-sync', function () {
     browserSync({
         // Option 1
-        server: {
-            baseDir: 'public',
-        },
+        // server: {
+        //    baseDir: 'public',
+        // },
         // Option 2
-        // proxy: "germinate.dev",
+        proxy: "germinate.dev",
     });
 });
 
