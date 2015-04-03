@@ -106,9 +106,9 @@ gulp.task('javascript', function () {
             'src/javascript/includes/**/*.js',
             'src/javascript/*.js',
         ])
-        .on('error', function (err) {
-            console.error('Error!', err.message);
-        })
+        //.on('error', function (err) {
+        //    console.error('Error!', err.message);
+        //})
         .pipe(concat('app.js'))
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
@@ -133,11 +133,11 @@ gulp.task('images', function () {
 gulp.task('browser-sync', function () {
     browserSync({
         // Option 1
-        // server: {
-        //    baseDir: 'public',
-        // },
+        server: {
+            baseDir: 'public',
+         },
         // Option 2
-        proxy: "germinate.dev",
+        // proxy: "germinate.dev",
     });
 });
 
