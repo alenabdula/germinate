@@ -1,11 +1,13 @@
-//
-//  Germinate Build Script, Version 0.0.2 Alpha
-//
+/* Helpers */
+function consoleEventReporter(event) {
+    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+}
+
 /* Gulp */
 var gulp = require('gulp');
 
 /* SCSS */
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -17,69 +19,48 @@ var size = require('gulp-size');
 /* JavaScript */
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
-var reporter = require('jshint-stylish');
-
-/* Images */
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
+var stylish = require('jshint-stylish');
 
 /* BrowserSync */
 var browserSync = require('browser-sync');
 
-/* SCSS */
 gulp.task('scss', function () {
-    return sass('src/scss/app.scss', {
-            style:'compressed',
-            sourcemap: true
-        })
-        .on('error', function (err) {
-            console.error('Error!', err.message);
-        })
-        .pipe(sourcemaps.write())
-        .pipe(autoprefixer('last 5 version'))
-        .pipe(rename({suffix:'.min'}))
-        .pipe(gulp.dest('public/css/'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(size({title: 'Styles ==>'}));
+  return gulp
+  .src('src/scss/app.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass({ outputStyle: 'expanded' }).on( 'error', sass.logError ))
+  .pipe(sourcemaps.write())
+  .pipe(autoprefixer({browsers: ['last 2 versions', '> 5%', 'Firefox ESR']}))
+  .pipe(gulp.dest('public/css/'))
+  .pipe(browserSync.reload({ stream: true }))
+  .pipe(size({title: 'Styles ==>'}));
 });
 
 /* JavaScript */
 gulp.task('javascript', function () {
-    return gulp.src([
-            'src/javascript/vendor/**/*.js',
-            'src/javascript/includes/**/*.js',
-            'src/javascript/*.js',
-        ])
-        //.on('error', function (err) {
-        //    console.error('Error!', err.message);
-        //})
-        .pipe(concat('app.js'))
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(uglify())
-        .pipe(rename({suffix:'.min'}))
-        .pipe(gulp.dest('public/js/'))
-        .pipe(size({title: 'JavaScript ==>'}));
-});
+  return gulp
+  .src([
+    'src/javascript/vendor/**/*.js',
+    'src/javascript/includes/**/*.js'
+    ])
+  .pipe(concat('app.js'))
+  .pipe(jshint())
+  .pipe(jshint.reporter('jshint-stylish'))
+  .pipe(jshint.reporter('fail'))
+  .pipe(uglify())
+  .pipe(rename({suffix:'.min'}))
+  .pipe(gulp.dest('public/js/'))
+  .pipe(size({title: 'JavaScript ==>'}));
 
-/* Images */
-gulp.task('images', function () {
-    return gulp.src('src/images/**/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use:[pngquant()]}))
-        .pipe(rename({suffix:'.min'}))
-        .pipe(gulp.dest('public/img'));
 });
 
 /* BrowserSync */
 gulp.task('browser-sync', function () {
-    browserSync({
+  browserSync({
         // Option 1
         server: {
-            baseDir: 'public',
-         },
+          baseDir: 'public',
+      },
         // Option 2
         // proxy: "germinate.dev",
     });
@@ -87,13 +68,18 @@ gulp.task('browser-sync', function () {
 
 /* BrowserSync Manual Reload */
 gulp.task('browser-sync-reload', function () {
-    browserSync.reload();
+  browserSync.reload();
 });
 
 /* Watch */
-//
-//gulp.task('default', ['browser-sync'], function () {
-//    gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['scss']);
-//    gulp.watch(['src/javascript/*.js', 'src/javascript/**/*.js'], ['javascript']);
-//    gulp.watch(['public/*.html'], ['browser-sync-reload']);
-//});
+gulp.task('default', ['browser-sync'], function () {
+    /* SCSS */
+    gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['scss'])
+        .on('change', function(event) { consoleEventReporter(event); });
+    /* JavaScript */
+    gulp.watch(['src/javascript/*.js', 'src/javascript/**/*.js'], ['javascript'])
+        .on('change', function(event) { consoleEventReporter(event); });
+    /* HTML */
+    gulp.watch(['public/*.html'], ['browser-sync-reload'])
+        .on('change', function(event) { consoleEventReporter(event); });
+});

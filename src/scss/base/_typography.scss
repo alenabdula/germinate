@@ -14,50 +14,34 @@ dfn {
     font-style: italic;
 }
 
-// @to-do
-
 h1, h2, h3, h4, h5, h6 {
     @include zero();
-    font-family: $headline_font_family;
-    text-rendering: optimizelegibility;
+    // line-height: $html_line_height;
 }
 
 h1 {
     font-size: $h1_size;
-    line-height: $h1_size;
-    margin: $h1_size 0;
 }
 
 h2 {
     font-size: $h2_size;
-    line-height: $h2_size;
-    margin: $h2_size 0;
 }
 
 h3 {
     font-size: $h3_size;
-    line-height: $h3_size;
-    margin: $h3_size 0;
 }
 
 h4 {
     font-size: $h4_size;
-    line-height: $h4_size;
-    margin: $h4_size 0;
 }
 
 h5 {
     font-size: $h5_size;
-    line-height: $h5_size;
-    margin: $h5_size 0;
 }
 
 h6 {
     font-size: $h6_size;
-    line-height: $h5_size;
-    margin: $h5_size 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 mark {
@@ -98,9 +82,16 @@ kbd,
 pre,
 samp {
     font-family: monospace;
-    font-size: 1.4rem;
 }
 
 p {
-    margin: 1.6rem 0;
+    margin: ($html_line_height * 1em) 0;
+    hyphens: auto;
+    max-width: 32em;
+    @include bp('bp1') {
+        line-height: 1.5;
+    }
+    @include bp('bp2') {
+        line-height: 1.6;
+    }
 }

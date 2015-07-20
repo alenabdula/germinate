@@ -1,26 +1,25 @@
 //
-// Global Variables
+// Global
 //
 $html_background: #f7f4f1;
 $html_text_color: #222222;
-$html_line_height: 1.6em;
-$html_font_family: serif;
-$html_font_size: 1.8rem;
-$html_link_color: #b6151a;
-$html_link_color_visited: #b6151a;
-$html_link_color_active: #b6151a;
-$html_link_color_hover: #b6151a;
+$html_font_family: Georgia, Droid Serif, serif;
+$html_line_height: 1.4;
+$html_link_color: blue;
+$html_link_color_visited: blue;
+$html_link_color_active: blue;
+$html_link_color_hover: blue;
 
 //
 //  Typography Variables
 //
 $headline_font_family: sans-serif;
-$h1_size: 3.9rem; // 39px
-$h2_size: 2.8rem; // 28px
-$h3_size: 2.1rem; // 21px
-$h4_size: 1.6rem; // 16px
-$h5_size: 1.2rem; // 12px
-$h6_size: 1rem;   // 10px
+$h1_size: 3.815em;
+$h2_size: 3.052em;
+$h3_size: 2.441em;
+$h4_size: 1.953em;
+$h5_size: 1.563em;
+$h6_size: 1.25em;
 //
 //  Responsive Breakpoints
 //
