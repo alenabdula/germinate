@@ -16,7 +16,6 @@ dfn {
 
 h1, h2, h3, h4, h5, h6 {
     @include zero();
-    // line-height: $html_line_height;
 }
 
 h1 {
@@ -82,16 +81,4 @@ kbd,
 pre,
 samp {
     font-family: monospace;
-}
-
-p {
-    margin: ($html_line_height * 1em) 0;
-    hyphens: auto;
-    max-width: 32em;
-    @include bp('bp1') {
-        line-height: 1.5;
-    }
-    @include bp('bp2') {
-        line-height: 1.6;
-    }
 }
