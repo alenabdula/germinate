@@ -1,3 +1,17 @@
+@charset "UTF-8";
+//
+//  Media Queries Defaults
+//
+$mq_base_font_size: 16px !default;
+$mq_responsive: true !default;
+$mq_breakpoints: (
+    mobile:  30em,
+    tablet:  36em,
+    desktop: 48em,
+    wide:    62em
+) !default;
+$mq_static_breakpoint: desktop !default;
+$mq_media_type: all !default;
 //
 // Global
 //
@@ -9,9 +23,8 @@ $html_link_color: blue;
 $html_link_color_visited: blue;
 $html_link_color_active: blue;
 $html_link_color_hover: blue;
-
 //
-//  Typography Variables
+//  Typography
 //
 $headline_font_family: sans-serif;
 $h1_size: 3.815em;
@@ -21,36 +34,21 @@ $h4_size: 1.953em;
 $h5_size: 1.563em;
 $h6_size: 1.25em;
 //
-//  Responsive Breakpoints
-//
-$bp1: 30em;
-$bp2: 36em;
-$bp3: 48em;
-$bp4: 62em;
-$bp5: 86em;
-$bph: 1.5;
-//
 // Utilities
 //
 @import 'utilities/boxsizing';
 @import 'utilities/mixins';
+@import 'utilities/media-queries';
 @import 'utilities/clearfix';
 @import 'utilities/viewport';
 //
 //  Base
 //
-@import 'base/site';
 @import 'base/resets';
+@import 'base/site';
 @import 'base/links';
 @import 'base/images';
 @import 'base/typography';
 @import 'base/elements';
 @import 'base/lists';
 @import 'base/tables';
-//
-//  Layouts and Grid
-//
-@import 'layout/grid';
-//
-//  Application Styles
-//
