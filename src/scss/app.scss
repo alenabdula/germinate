@@ -27,12 +27,14 @@ $html_link_color_hover: blue;
 //  Typography
 //
 $headline_font_family: sans-serif;
-$h1_size: 3.815em;
-$h2_size: 3.052em;
-$h3_size: 2.441em;
-$h4_size: 1.953em;
-$h5_size: 1.563em;
-$h6_size: 1.25em;
+$headlines: (
+  h1: 3.815em,
+  h2: 3.052em,
+  h3: 2.441em,
+  h4: 1.953em,
+  h5: 1.563em,
+  h6: 1.25em
+) !default;
 //
 // Utilities
 //
