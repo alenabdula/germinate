@@ -1,4 +1,6 @@
-/// Convert pixels to ems
+//
+//  Convert pixels to ems
+//
 @function mq_px2em($px, $base_font_size: $mq_base_font_size) {
     @if unitless($px) {
         @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
@@ -9,7 +11,9 @@
     @return ($px / $base_font_size) * 1em;
 }
 
-/// Get a breakpoint's width
+//
+//  Get a breakpoint's width
+//
 @function mq_get_breakpoint_width($name, $breakpoints: $mq_breakpoints) {
     @if map-has-key($breakpoints, $name) {
         @return map-get($breakpoints, $name);
@@ -18,7 +22,9 @@
     }
 }
 
-/// Media Query mixin
+//
+//  Media Query mixin
+//
 @mixin mq(
     $from: false,
     $until: false,
@@ -92,38 +98,3 @@
     $new-breakpoint: ($name: $width);
     $mq_breakpoints: map-merge($mq_breakpoints, $new-breakpoint) !global;
 }
-
-
-body {
-  
-  background: yellow;
-  
-  @include mq($from: mobile, $until: tablet) {
-    
-    background: red;
-  
-  }
-  
-  @include mq($from: tablet) {
-    
-    background: green;
-  
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
