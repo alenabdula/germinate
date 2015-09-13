@@ -2,12 +2,12 @@
 <content>
 <![CDATA[
 @include mq(\$from: ${1:mobile}${2:, \$until: ${3:tablet}}) {
-	${4:/// Do magic...}
+    ${4:/// Do magic...}
 }
 ${5:}
 ]]>
 </content>
-	<tabTrigger>mq</tabTrigger>
+    <tabTrigger>mq</tabTrigger>
 	<scope>source.scss</scope>
-	<description>Alen: Custom Media Query</description>
+	<description>Germinate: Media Query Mixin</description>
 </snippet>
