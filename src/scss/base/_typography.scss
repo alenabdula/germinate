@@ -17,30 +17,11 @@ dfn {
 h1, h2, h3, h4, h5, h6 {
     @include zero();
 }
-
-h1 {
-    font-size: $h1_size;
-}
-
-h2 {
-    font-size: $h2_size;
-}
-
-h3 {
-    font-size: $h3_size;
-}
-
-h4 {
-    font-size: $h4_size;
-}
-
-h5 {
-    font-size: $h5_size;
-}
-
-h6 {
-    font-size: $h6_size;
-    text-transform: uppercase;
+// Generate Headline Elements
+@each $element, $size in $headlines {
+  #{$element} {
+    font-size: $size;
+  }
 }
 
 mark {
