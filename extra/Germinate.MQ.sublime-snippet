@@ -8,6 +8,6 @@ ${5:}
 ]]>
 </content>
     <tabTrigger>mq</tabTrigger>
-	<scope>source.scss</scope>
-	<description>Germinate: Media Query Mixin</description>
+    <scope>source.scss</scope>
+    <description>Germinate: Media Query Mixin</description>
 </snippet>
