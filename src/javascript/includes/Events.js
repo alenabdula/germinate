@@ -14,7 +14,9 @@ var $submitAJAX = function (event) {
     type : $method,
     url : $url,
     data : $data,
-    success : function () { $.publish('AjaxFormSubmitted', $form); },
+    success : function () {
+      $.publish('AjaxFormSubmitted', $form);
+    },
   });
 
   event.preventDefault();
