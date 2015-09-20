@@ -53,20 +53,26 @@ hr {
     height: 0;
 }
 
-pre {
-    overflow: auto;
-}
-
 code,
 kbd,
 pre,
 samp {
     font-family: monospace;
+    letter-spacing: 1px;
+    color: #575757;
 }
 
+code,
 kbd {
-    font-size: 90%;
-    letter-spacing: 1px;
     padding: .2rem .4rem;
     @include bordered;
+}
+
+code {
+    display: block;
+    line-height: 2;
+}
+
+pre {
+    overflow: auto;
 }
