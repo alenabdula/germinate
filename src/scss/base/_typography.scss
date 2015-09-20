@@ -63,3 +63,10 @@ pre,
 samp {
     font-family: monospace;
 }
+
+kbd {
+    font-size: 90%;
+    letter-spacing: 1px;
+    padding: .2rem .4rem;
+    @include bordered;
+}
