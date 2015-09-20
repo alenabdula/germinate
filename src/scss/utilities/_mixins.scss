@@ -7,6 +7,17 @@
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    font: "0/0" a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+@mixin text_truncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @mixin invisible {
@@ -90,4 +101,10 @@
 @mixin zero() {
     margin: 0;
     padding: 0;
+}
+
+@mixin center_block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
