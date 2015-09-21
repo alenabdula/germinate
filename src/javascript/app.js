@@ -24,22 +24,47 @@
     
     init : function() {
       console.log('Initialized!!!', 'Width: ' + this.width, 'Height: ' + this.height);
+      this.equalHeight();
+    },
+    
+    equalHeight : function() {
+      var $col = $('.equal-height-column');
+      var maxHeight = [];
+      var rows = [];
+      var rowTop = 0;
+      var rowIndex = 0;
+      
+      $col.each(function() {
+        $el = $(this);
+        $el.css('height', '');
+        
+        if ( $el.offset().top > rowTop ) {
+            rowIndex++;
+            rows[rowIndex] = [];
+            rowTop = $el.offset().top;
+            maxHeight[rowIndex] = 0;
+        }
+
+        if ( $el.height() > maxHeight[rowIndex] ) {
+            maxHeight[rowIndex] = $el.height();
+        }
+
+        rows[rowIndex].push($el);
+
+      });
+      
+      for ( row = 1; row <= rowIndex; row++ ) {
+        for ( i = 0; i <= rows[row].length; i++ ) {
+            $(rows[row][i]).height(maxHeight[row]);
+        }
+      }
     },
     
   };
-  
-  /* Document Ready  */
-  $(document).on('ready', function() {
-    
-    AppName.init();
-    
-  });
-  
+  /* Initialize */
+  AppName.init();
   /* Window Resize */
   AppName.resize(function() {
-    
     AppName.on_resize();
-    
   });
-  
 })(window.jQuery);
