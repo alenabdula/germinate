@@ -19,6 +19,7 @@
     on_resize : function() {
       this.width = $(window).width();
       this.height = $(window).height();
+      this.equalHeight();
       console.log('Resized!!!', 'Width: ' + this.width, 'Height: ' + this.height);
     },
     
@@ -28,36 +29,19 @@
     },
     
     equalHeight : function() {
-      var $col = $('.equal-height-column');
       var maxHeight = [];
-      var rows = [];
-      var rowTop = 0;
-      var rowIndex = 0;
+      var elements = $('.equal-height-column');
       
-      $col.each(function() {
-        $el = $(this);
-        $el.css('height', '');
-        
-        if ( $el.offset().top > rowTop ) {
-            rowIndex++;
-            rows[rowIndex] = [];
-            rowTop = $el.offset().top;
-            maxHeight[rowIndex] = 0;
-        }
-
-        if ( $el.height() > maxHeight[rowIndex] ) {
-            maxHeight[rowIndex] = $el.height();
-        }
-
-        rows[rowIndex].push($el);
-
+      elements.each(function() {
+        maxHeight.push($(this).height());
       });
       
-      for ( row = 1; row <= rowIndex; row++ ) {
-        for ( i = 0; i <= rows[row].length; i++ ) {
-            $(rows[row][i]).height(maxHeight[row]);
-        }
-      }
+      var maxSize = Math.max.apply( Math, maxHeight );
+      
+      elements.each(function(){
+        $(this).height(maxSize);
+      });
+
     },
     
   };
