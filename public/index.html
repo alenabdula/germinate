@@ -2,62 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-    <link rel="stylesheet" href="css/app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/app.css"> -->
 </head>
 <body>
-
-    <div>
-        
-        <h1>Headline 1</h1>
-        <h2>Headline 2</h2>
-        <h3>Headline 3</h3>
-        <h4>Headline 4</h4>
-        <h5>Headline 5</h5>
-        <h6>Headline 6</h6>
-
-        p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">some link</a> 
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-        <h1>Headline 1</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipa <span style="color:red;">isicing elit architecto veroa</span> psum dolor sit amet, consectetur adipisicing elit. Quod quibusdam quis cumque fuga eaque beatae est ipsam dicta, ad blanditiis accusamus, voluptates nulla ea in quisquam sequi, quasi dolores numquam?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eligendi harum minus praesentium ea natus illum mollitia, totam, repudiandae libero possimus blanditiis vero assumenda amet quae, deserunt labore dolore soluta.</p>
-        <h2>Headline 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quibusdam quis cumque fuga eaque beatae est ipsam dicta, ad blanditiis accusamus, voluptates nulla ea in quisquam sequi, quasi dolores numquam?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eligendi harum minus praesentium ea natus illum mollitia, totam, repudiandae libero possimus blanditiis vero assumenda amet quae, deserunt labore dolore soluta.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quibusdam quis cumque fuga eaque beatae est ipsam dicta, ad blanditiis accusamus, voluptates nulla ea in quisquam sequi, quasi dolores numquam?</p>
-        <h3>Headline 3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quibusdam quis cumque fuga eaque beatae est ipsam dicta, ad blanditiis accusamus, voluptates nulla ea in quisquam sequi, quasi dolores numquam?</p>
-        <h4>Headline 4</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quibusdam quis cumque fuga eaque beatae est ipsam dicta, ad blanditiis accusamus, voluptates nulla ea in quisquam sequi, quasi dolores numquam?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eligendi harum minus praesentium ea natus illum mollitia, totam, repudiandae libero possimus blanditiis vero assumenda amet quae, deserunt labore dolore soluta.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quibusdam quis cumque fuga eaque beatae est ipsam dicta, ad blanditiis accusamus, voluptates nulla ea in quisquam sequi, quasi dolores numquam?</p>
-        <h5>Headline 5</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quibusdam quis cumque fuga eaque beatae est ipsam dicta, ad blanditiis accusamus, voluptates nulla ea in quisquam sequi, quasi dolores numquam?</p>
-
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 65%;
+        }
+        .row div {
+            padding: 2rem;
+        }
+    </style>
+    <h1>Equal Height Columns</h1>
+    <h2>Without...</h2>
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-6" style="background-color:red;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+            </div>
+            <div class="col-sm-6" style="background-color:yellow;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa suscipit unde, id aut doloremque obcaecati, voluptates natus. Inventore, vero blanditiis. Rerum facere vero architecto ab sunt qui.</p>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-6" style="background-color:orange;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, neque placeat modi reprehenderit eveniet eos culpa. Quas eius molestiae omnis, recusandae officia! Quod inventore sapiente praesentium, possimus placeat nihil.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, neque placeat modi reprehenderit eveniet eos culpa.</p>
+            </div>
+            <div class="col-sm-3" style="background-color:green;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sed quas, harum quasi aperiam ab eligendi, inventore animi iusto est iure quos aut magni neque quaerat dolorem ad esse totam.</p>
+            </div>
+            <div class="col-sm-3" style="background-color:pink;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sed quas, harum quasi aperiam ab eligendi, inventore animi iusto est iure quos aut magni neque quaerat dolorem ad esse totam.</p>
+            </div>
+        </div>
+    </div>
+    <h2>With...</h2>
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-6 equal-heights" style="background-color:red;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit nobis iure, ab aliquid eaque vitae provident</p>
+            </div>
+            <div class="col-sm-6 equal-heights" style="background-color:yellow;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa suscipit unde, id aut doloremque obcaecati, voluptates natus. Inventore, vero blanditiis. Rerum facere vero architecto ab sunt qui.</p>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-6 equal-heights" style="background-color:orange;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, neque placeat modi reprehenderit eveniet eos culpa. Quas eius molestiae omnis, recusandae officia! Quod inventore sapiente praesentium, possimus placeat nihil.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus iusto, neque placeat modi reprehenderit eveniet eos culpa.</p>
+            </div>
+            <div class="col-sm-3 equal-heights" style="background-color:green;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sed quas, harum quasi aperiam ab eligendi, inventore animi iusto est iure quos aut magni neque quaerat dolorem ad esse totam.</p>
+            </div>
+            <div class="col-sm-3 equal-heights" style="background-color:pink;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sed quas, harum quasi aperiam ab eligendi, inventore animi iusto est iure quos aut magni neque quaerat dolorem ad esse totam.</p>
+            </div>
+        </div>
     </div>
 
-    <header role="banner" class="head">
-        <h6>Header</h6>
-    </header>
-
-    <main role="main" class="body">
-        <h6>Content</h6>
-    </main>
-
-    <footer role="contentinfo" class="foot">
-        <h6>Footer</h6>
-    </footer>
-
-    <script src="js/app.min.js"></script>
-
+<script src="js/app.min.js"></script>
 </body>
 </html>

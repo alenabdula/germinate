@@ -1,13 +1,7 @@
-
 (function($) {
-  
   var AppName = {
-    
     width : $(window).width(),
-    
     height : $(window).height(),
-    
-    /* https://github.com/louisremi/jquery-smartresize */
     resize: function(a, b) {
       onresize = function() {
         clearTimeout(b);
@@ -15,40 +9,34 @@
       };
       return a;
     },
-    
-    on_resize : function() {
+    resized : function() {
       this.width = $(window).width();
       this.height = $(window).height();
       this.equalHeight();
-      console.log('Resized!!!', 'Width: ' + this.width, 'Height: ' + this.height);
+      console.log('resized');
     },
-    
+    equalHeight: function() {
+      var rows = $('.row');
+      if ( !rows.length ) return false;
+      rows.each(function(){
+        var equalItems = $(this).find('.equal-heights');
+        var itemsHeight = [];
+        equalItems.each(function(){
+          itemsHeight.push($(this).height());
+        });
+        var maxSize = Math.max.apply( Math, itemsHeight );
+        equalItems.height(maxSize);
+      });
+    },
     init : function() {
-      console.log('Initialized!!!', 'Width: ' + this.width, 'Height: ' + this.height);
       this.equalHeight();
+      console.log('init');
     },
-    
-    equalHeight : function() {
-      var maxHeight = [];
-      var elements = $('.equal-height-column');
-      
-      elements.each(function() {
-        maxHeight.push($(this).height());
-      });
-      
-      var maxSize = Math.max.apply( Math, maxHeight );
-      
-      elements.each(function(){
-        $(this).height(maxSize);
-      });
-
-    },
-    
   };
   /* Initialize */
   AppName.init();
   /* Window Resize */
   AppName.resize(function() {
-    AppName.on_resize();
+    AppName.resized();
   });
 })(window.jQuery);

@@ -25,12 +25,11 @@ var stylish = require('jshint-stylish');
 var browserSync = require('browser-sync');
 
 gulp.task('scss', function () {
-  return gulp
-  .src('src/scss/app.scss')
+  return gulp.src('src/scss/app.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({ outputStyle: 'expanded' }).on( 'error', sass.logError ))
   .pipe(sourcemaps.write())
-  .pipe(autoprefixer({browsers: ['last 2 versions', '> 5%', 'Firefox ESR']}))
+  .pipe(autoprefixer({browsers: ['last 3 versions', '> 5%', 'Firefox ESR']}))
   .pipe(gulp.dest('public/css/'))
   .pipe(browserSync.reload({ stream: true }))
   .pipe(size({title: 'Styles ==>'}));
@@ -38,20 +37,23 @@ gulp.task('scss', function () {
 
 /* JavaScript */
 gulp.task('javascript', function () {
-  return gulp
-  .src([
-    'src/javascript/vendor/**/*.js',
-    'src/javascript/includes/**/*.js'
-    ])
+  return gulp.src([
+    './src/javascript/vendor/**/*.js',
+    './src/javascript/includes/**/*.js',
+    './src/javascript/app.js',
+  ])
   .pipe(concat('app.js'))
   .pipe(jshint())
   .pipe(jshint.reporter('jshint-stylish'))
   .pipe(jshint.reporter('fail'))
   .pipe(uglify())
-  .pipe(rename({suffix:'.min'}))
-  .pipe(gulp.dest('public/js/'))
+  .pipe(rename({
+    basename: "app",
+    suffix:'.min',
+    extname: ".js"
+  }))
+  .pipe(gulp.dest('./public/js/'))
   .pipe(size({title: 'JavaScript ==>'}));
-
 });
 
 /* BrowserSync */
@@ -77,7 +79,7 @@ gulp.task('default', ['browser-sync'], function () {
     gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['scss'])
         .on('change', function(event) { consoleEventReporter(event); });
     /* JavaScript */
-    gulp.watch(['src/javascript/*.js', 'src/javascript/**/*.js'], ['javascript'])
+    gulp.watch(['src/javascript/*.js', 'src/javascript/**/*.js'], ['javascript', 'browser-sync-reload'])
         .on('change', function(event) { consoleEventReporter(event); });
     /* HTML */
     gulp.watch(['public/*.html'], ['browser-sync-reload'])
