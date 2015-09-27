@@ -12,7 +12,7 @@ In order to use Gulp, our build system/script, you will need to install followin
 + From root folder run following commands:
   + `npm install -g gulp` installs Gulp globally
   + `npm install` installs our development dependencies from `composer.json` [file](https://github.com/alenabdula/germinate/blob/master/package.json).
-  + And finally run `gulp` to start [default Gulp task](https://github.com/alenabdula/germinate/blob/master/Gulpfile.js#L118)
+  + And finally run `gulp` to start [default Gulp task](https://github.com/alenabdula/germinate/blob/master/Gulpfile.js#L77)
   + To run Gulp tasks individually you would run `gulp <task name>` ex. `gulp scss` or `gulp javascript`.
 
 ###Inspired & Attributed###
