@@ -49,8 +49,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
     -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
     box-sizing: content-box;
 }
 
@@ -60,14 +58,14 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+    border: 1px solid $html_border_color;
+    margin: 0;
+    padding: 1rem;
 }
 
 legend {
     border: 0;
-    padding: 0;
+    padding: 0 1rem;
 }
 
 textarea {
@@ -76,4 +74,22 @@ textarea {
 
 optgroup {
     font-weight: bold;
+}
+
+form {
+    margin: 1rem 0;
+    div {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid $html_border_color;
+        input:not([type="radio"]) {
+            display: block;
+            width: 100%;
+        }
+        textarea {
+            width: 100%;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
 }

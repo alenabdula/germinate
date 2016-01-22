@@ -16,8 +16,12 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-    <main>
-      <h1 class="page-title">Articles</h1>
+    <!-- header -->
+    <header role="banner">
+      <h1 class="page-title">Germinate</h1>
+    </header>
+    <!-- main -->
+    <main role="main">
       <article class="article">
         <header>
           <h1 class="article-title">Danny Amendola Reportedly Fined for Hit on Jamell Fleming</h1>
@@ -26,7 +30,7 @@
         <blockquote>
           <p>After receiving a personal foul penalty for hitting Kansas City Chiefs cornerback Jamell Fleming during a punt return last week, New England Patriots wideout Danny Amendola was reportedly fined Friday.</p>
         </blockquote>
-        <p>According to ESPN.com's Mike Reiss, Amendola plans to appeal the fine in the wake of New England's 27-20 win over KC in an AFC divisional playoff clash.</p>
+        <p><a href="#">According to ESPN.com's Mike Reiss</a>, Amendola plans to appeal the fine in the wake of New England's 27-20 win over KC in an <abbr title="American Football Conference">AFC</abbr> divisional playoff clash.</p>
         <p>The second-quarter play featured Amendola abdicating his duties as a return man in favor of taking out Fleming, who was attempting to down the punt.</p>
         <p>While the 30-year-old pass-catcher was flagged for his hit on Fleming, the impact was negligible. The penalty only moved the ball back two yards since New England was already on its own 4-yard line.</p>
         <p>There was no shortage of outrage on Twitter after the play, as many felt the punishment didn't fit the crime, including Aaron Schatz of Football Outsiders:</p>
@@ -34,11 +38,20 @@
           <p>Penalizing Amendola half the distance is pointless. That's like two yards. He honestly should be ejected. WTF was that?</p>
         </blockquote>
         <p>Patriots head coach Bill Belichick, however, declared the hit a legal one despite Amendola seemingly leading with his helmet, per Mike Petraglia of WEEI.com.</p>
-        <p>"Saw him trying to block the guy trying to down the ball," Belichick said. "It's hard to tell from the coaching film where the hit occurred. It was a legal play. We're allowed to block him. (Amendola) didn't give a fair catch signal so he's allowed to block."</p>
+        <p>"Saw him trying to block the guy trying to down the ball," <mark>Belichick said.</mark> "It's hard to tell from the coaching film where the hit occurred. It was a legal play. We're allowed to block him. (Amendola) didn't give a fair catch signal so he's allowed to block."</p>
         <p>Regardless of the hit's legality and whether the fine is upheld, the Pats can rest assured knowing Amendola's services will be available for their AFC Championship Game meeting with the Denver Broncos on Sunday.</p>
-        <p>New England has struggled through injuries all season long, but quarterback Tom Brady essentially has his full arsenal of weapons with Amendola, Julian Edelman and Rob Gronkowski leading the way.</p>
+        <p>New England has struggled through injuries all season long, but quarterback <dfn title="God">Tom Brady</dfn> essentially has his full arsenal of weapons with Amendola, Julian Edelman and Rob Gronkowski leading the way.</p>
         <p>The manner in which the NFL handles Amendola's situation is certainly important, though, since it could either encourage or dissuade similar plays in the future depending on how hard it cracks down.</p>
-        <aside>
+        <code><pre>
+/* function */
+function sayHi() {
+  console.log('Hi!');
+}
+/* comment */
+sayHi();
+</pre></code>
+        <!-- aside -->
+        <aside role="complementary">
           <h1>Related</h1>
           <ul>
             <li>Item One</li>
@@ -57,5 +70,64 @@
         </aside>
       </article>
     </main>
+    <section>
+      <h1>Example Form</h1>
+      <form action="/" method="post">
+        <fieldset>
+          <legend>Order</legend>
+          <div>
+            <input type="radio" name="sex" value="other" id="other">
+            <label for="other">Other</label>
+            <input type="radio" name="sex" value="female" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="sex" value="male" id="male">
+            <label for="male">Male</label>
+          </div>
+          <div>
+            <label for="options">Pick perfect size: </label>
+            <select id="options">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Date: </label>
+            <input type="date" id="date">
+          </div>
+          <div>
+            <label for="password">Password: </label>
+            <input type="password" id="password">
+          </div>
+          <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name">
+          </div>
+          <div>
+            <label for="search">Search: </label>
+            <input type="search" placeholder="Search" id="search">
+          </div>
+          <div>
+            <label for="tel">Telephone: </label>
+            <input type="tel" id="tel">
+          </div>
+          <div>
+            <label for="email">Email: </label>
+            <input type="email" id="email">
+          </div>
+          <div>
+            <label for="message">Message: </label>
+            <textarea id="message"></textarea>
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+      </fieldset>
+    </form>
+    </section>
+    <!-- footer -->
+    <footer role="contentinfo">
+      <h1>Germinate</h1>
+    </footer>
   </body>
 </html>

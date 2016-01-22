@@ -4,83 +4,103 @@
 }
 
 abbr[title] {
-    border-bottom: 2px dotted $html_link_color;
+  border-bottom: 2px dotted $html_link_color;
 }
 
 b, strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 em, i {
-    font-style: italic;
+  font-style: italic;
 }
 
 dfn {
-    font-style: italic;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+  font-style: italic;
 }
 
 // Generate Headline Elements
 @each $element, $size in $headlines {
   #{$element} {
     font-size: $size;
+    margin: 0;
     margin-bottom: 1rem;
   }
 }
 
 mark {
-    background: rgba($html_link_color, 0.5);
-    color: $html_text_color;
-    padding: 2px;
+  background: rgba($html_link_color, 0.5);
+  color: $html_text_color;
+  padding: 2px;
 }
 
 small {
-    font-size: 90%;
+  font-size: 90%;
 }
 
 sub,
 sup {
-    font-size: 90%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 90%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-    top: -0.5rem;
+  top: -0.5rem;
 }
 
 sub {
-    bottom: -0.5rem;
+  bottom: -0.5rem;
 }
 
 hr {
-    height: 0;
+  height: 0;
 }
 
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace;
-    letter-spacing: 1px;
-    color: #575757;
-}
-
-code,
-kbd {
-    padding: .2rem .4rem;
-    @include bordered;
-}
-
+samp {}
+kbd {}
 code {
-    display: block;
-    line-height: 2;
+  display: block;
+  margin: 1rem 0;
+}
+pre {
+  padding: 1rem;
+  overflow: auto;
+  margin: 0;
+  background-color: whitesmoke;
 }
 
-pre {
-    overflow: auto;
+$open-quote: '"';
+$close-quote: '"';
+
+blockquote {
+  margin: 1rem;
+  font-style: italic;
+  font-size: 110%;
+  text-indent: -0.41em;
+  quotes: "#{$open-quote}" "#{$close-quote}";
+  p:before {
+    content: "#{$open-quote}";
+    content: open-quote;
+  }
+  p:after {
+    content: "";
+    content: no-close-quote;
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  p:last-of-type:after {
+    content: "#{$close-quote}";
+    content: close-quote;
+  }
+  q:before {
+    content: "\2018";
+    content: open-quote;
+  }
+  q:after {
+    content: "\2019";
+    content: close-quote;
+  }
 }

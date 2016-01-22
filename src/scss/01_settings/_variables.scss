@@ -4,13 +4,14 @@ $brand_color_green: #A4CE39 !default;
 $brand_color_purple: rebeccapurple !default;
 //
 // Default Colors
-$html_background: #f7f4f1 !default;
+$html_background: #FFFFEE !default;
 $html_text_color: #222 !default;
 $html_link_color: $brand_color_green;
+$html_border_color: #ccc;
 //
 //  Typography
 $html_font_family: Georgia, Droid Serif, serif !default;
-$html_line_height: 1.4 !default;
+$html_line_height: 1.6 !default;
 $headlines: (
   h1: 1.802em,
   h2: 1.602em,
