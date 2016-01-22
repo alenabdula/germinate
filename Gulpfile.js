@@ -48,9 +48,9 @@ gulp.task('javascript', function() {
   var destination = './public/js/';
   if (Enviroment === 'development') {
     return gulp.src(source)
-      .pipe(concat('master.js'))
       .pipe(jshint())
       .pipe(jshint.reporter(jshintReporter))
+      .pipe(concat('master.js'))
       .pipe(gulp.dest(destination))
     ;
   }

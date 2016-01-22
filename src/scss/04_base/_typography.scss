@@ -1,5 +1,14 @@
+/* WebKit/Blink Browsers */
+::selection {
+  background: $html_link_color;
+}
+/* Gecko Browsers */
+::-moz-selection {
+  background: $html_link_color;
+}
+
 abbr[title] {
-    border-bottom: 1px dotted;
+    border-bottom: 2px dotted $html_link_color;
 }
 
 b, strong {
@@ -25,8 +34,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 mark {
-    background: #ff0;
-    color: #000;
+    background: rgba($html_link_color, 0.5);
+    color: $html_text_color;
+    padding: 2px;
 }
 
 small {
