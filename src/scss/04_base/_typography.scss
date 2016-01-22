@@ -1,8 +1,4 @@
-/* WebKit/Blink Browsers */
-::selection {
-  background: $html_link_color;
-}
-/* Gecko Browsers */
+::selection,
 ::-moz-selection {
   background: $html_link_color;
 }
@@ -24,12 +20,14 @@ dfn {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @include zero();
+    margin: 0;
 }
+
 // Generate Headline Elements
 @each $element, $size in $headlines {
   #{$element} {
     font-size: $size;
+    margin-bottom: 1rem;
   }
 }
 
