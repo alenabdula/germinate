@@ -19,6 +19,7 @@ dfn {
   font-style: italic;
 }
 
+//
 // Generate Headline Elements
 @each $element, $size in $headlines {
   #{$element} {
@@ -71,17 +72,14 @@ pre {
   background-color: whitesmoke;
 }
 
-$open-quote: '"';
-$close-quote: '"';
-
 blockquote {
   margin: 1rem;
   font-style: italic;
   font-size: 110%;
   text-indent: -0.41em;
-  quotes: "#{$open-quote}" "#{$close-quote}";
+  quotes: "#{$open_blockquote}" "#{$close_blockquote}";
   p:before {
-    content: "#{$open-quote}";
+    content: "#{$open_blockquote}";
     content: open-quote;
   }
   p:after {
@@ -92,7 +90,7 @@ blockquote {
     margin-bottom: 0;
   }
   p:last-of-type:after {
-    content: "#{$close-quote}";
+    content: "#{$close_blockquote}";
     content: close-quote;
   }
   q:before {

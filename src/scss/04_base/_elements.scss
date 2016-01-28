@@ -75,21 +75,3 @@ textarea {
 optgroup {
     font-weight: bold;
 }
-
-form {
-    margin: 1rem 0;
-    div {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid $html_border_color;
-        input:not([type="radio"]) {
-            display: block;
-            width: 100%;
-        }
-        textarea {
-            width: 100%;
-        }
-        &:last-child {
-            border-bottom: none;
-        }
-    }
-}

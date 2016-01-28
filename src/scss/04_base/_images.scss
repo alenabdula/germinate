@@ -11,13 +11,3 @@ img[height] {
 svg:not(:root) {
     overflow: hidden;
 }
-
-figure {
-    @include zero();
-    > img {
-        display: block;
-    }
-    figcaption {
-        @include zero();
-    }
-}
