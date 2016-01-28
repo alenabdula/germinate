@@ -1,110 +1,65 @@
+//
+// Mixins
+
 @mixin hidden {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
+}
+
+@mixin unhidden {
+  display: block;
+  visibility: visible;
 }
 
 @mixin hide_text {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    font: "0/0" a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font: "0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
-@mixin text_truncate() {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+@mixin text_truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @mixin invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 @mixin visually_hidden {
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-
-    &.focusable {
-        &:active, &:focus {
-            position: static;
-            clip: auto;
-            height: auto;
-            width: auto;
-            margin: 0;
-            overflow: visible;
-        }
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  &.focusable {
+    &:active, &:focus {
+      position: static;
+      clip: auto;
+      height: auto;
+      width: auto;
+      margin: 0;
+      overflow: visible;
     }
+  }
 }
 
-@mixin bordered($top-color: #eee, $right-color: #eee, $bottom-color: #eee, $left-color: #eee) {
-    border-top: solid 1px $top-color;
-    border-left: solid 1px $left-color;
-    border-right: solid 1px $right-color;
-    border-bottom: solid 1px $bottom-color;
-}
-
-@mixin box_shadow($shadow: 0 1px 3px rgba(0,0,0,.25)) {
-    box-shadow: $shadow;
-}
-
-@mixin drop_shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $alpha: 0.1) {
-    box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
-}
-
-@mixin opacity($opacity: .5) {
-    opacity: $opacity;
-}
-
-@mixin rotate($deg) {
-    transform: rotate($deg);
-}
-
-@mixin scale($ratio) {
-    transform: scale($ratio);
-}
-
-@mixin skew($x: 0, $y: 0) {
-    transform: skew($x, $y);
-}
-
-@mixin translate($x: 0, $y: 0) {
-    transform: translate($x, $y);
-}
-
-@mixin translate3d($x: 0, $y: 0, $z: 0) {
-    transform: translate($x, $y, $z);
-}
-
-@mixin background_size($size) {
-    background-size: $size;
-}
-
-@mixin background_clip($clip) {
-    background-clip: $clip;
-}
-
-@mixin resize($direction: both) {
-    resize: $direction;
-    overflow: auto;
-}
-
-@mixin zero() {
-    margin: 0;
-    padding: 0;
+@mixin zero {
+  margin: 0;
+  padding: 0;
 }
 
 @mixin center_block() {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
