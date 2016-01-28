@@ -110,4 +110,8 @@ gulp.task('default', ['browser-sync'], function() {
   /* JavaScript */
   gulp.watch(['./src/javascript/*.js', './src/javascript/**/*.js'], ['javascript'])
     .on('change', function(event) { consoleEventReporter(event);});
+
+  /* HTML */
+  gulp.watch(['./public/**/*.html', './public/*.html'], ['browser-sync-reload'])
+    .on('change', function(event) { consoleEventReporter(event);});
 });
