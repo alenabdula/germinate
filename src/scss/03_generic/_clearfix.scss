@@ -1,11 +1,15 @@
+//
+// Clear Floats
+.cf,
+%cf,
 .clearfix,
 %clearfix {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }

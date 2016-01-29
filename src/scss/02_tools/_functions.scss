@@ -1,2 +1,22 @@
 //
-// Functions
+// Convert PX to EM
+@function mq_px2em($px, $base_font_size: $mq_base_font_size) {
+  @if unitless($px) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+    @return mq_px2em($px * 1px, $base_font_size);
+  }
+  @else if unit($px) == em {
+    @return $px;
+  }
+  @return ($px / $base_font_size) * 1em;
+}
+//
+// Get Breakpoints Width
+@function mq_get_breakpoint_width($name, $breakpoints: $mq_breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    @return map-get($breakpoints, $name);
+  }
+  @else {
+    @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+  }
+}

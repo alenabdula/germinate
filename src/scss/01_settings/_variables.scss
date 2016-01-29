@@ -27,10 +27,19 @@ $headlines: (
 $mq_base_font_size: 16px !default;
 $mq_responsive: true !default;
 $mq_breakpoints: (
-  mobile: 30em,
-  tablet: 36em,
-  desktop: 48em,
-  wide: 62em
+  xs: 0,
+  sm: 34em,
+  md: 48em,
+  lg: 62em,
+  xl: 75em
 ) !default;
-$mq_static_breakpoint: desktop !default;
+$mq_static_breakpoint: lg !default;
 $mq_media_type: all !default;
+//
+// Grid
+$grid_columns: 12 !default;
+$enable-flex: true !default;
+$grid_gutter_width: 1.875rem !default;
+$enable_grid_classes: true !default;
+$grid_breakpoints: $mq_breakpoints;
+$container_max_widths: ( sm: 36em, md: 45em, lg: 58.75em, xl: 71.25em) !default;

@@ -1,18 +1,20 @@
+//
+// Links
 a {
-    background: transparent;
-    color: $html_link_color;
-    text-decoration: none;
-    &:visited {}
-    &:active {
-        background-color: $html_link_color;
-        color: $html_text_color;
-        outline: 0;
-    }
-    &:hover {
-        border-bottom: 2px solid $html_link_color;
-        outline: 0;
-    }
-    &:focus {
-        outline-color: $html_link_color;
-    }
+  background: transparent;
+  color: $html_link_color;
+  text-decoration: none;
+  &:visited {}
+  &:active {
+    background-color: $html_link_color;
+    color: $html_text_color;
+    outline: 0;
+  }
+  &:hover {
+    border-bottom: 2px solid $html_link_color;
+    outline: 0;
+  }
+  &:focus {
+    outline-color: $html_link_color;
+  }
 }

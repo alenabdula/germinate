@@ -1,12 +1,15 @@
+//
+// Site Defaults
 html {
-    background: $html_background;
-    min-height: 100%;
-    overflow-y: scroll;
+  background: $html_background;
+  min-height: 100%;
+  overflow-y: scroll;
 }
+
 body {
-    font-family: $html_font_family;
-    font-size: 100%;
-    line-height: $html_line_height;
-    background-color: transparent;
-    color: $html_text_color;
+  font-family: $html_font_family;
+  font-size: 100%;
+  line-height: $html_line_height;
+  background-color: transparent;
+  color: $html_text_color;
 }
