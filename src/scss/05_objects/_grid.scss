@@ -1,0 +1,48 @@
+//
+// Container
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+.container-fluid {
+  @include make-container();
+}
+//
+// Row
+@if $enable_grid_classes {
+  .row {
+    @include make-row();
+  }
+}
+//
+// Columns
+@if $enable_grid_classes {
+  @include make-grid-columns();
+}
+//
+// Flex variation
+@if $enable_flex and $enable_grid_classes {
+  // Flex column reordering
+  @each $breakpoint in map-keys($grid_breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .col-#{$breakpoint}-first { order: -1; }
+      .col-#{$breakpoint}-last  { order: 1; }
+    }
+  }
+  // Alignment for every column in row
+  @each $breakpoint in map-keys($grid_breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .row-#{$breakpoint}-top    { align-items: flex-start; }
+      .row-#{$breakpoint}-center { align-items: center; }
+      .row-#{$breakpoint}-bottom { align-items: flex-end; }
+    }
+  }
+  // Alignment per column
+  @each $breakpoint in map-keys($grid_breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .col-#{$breakpoint}-top    { align-self: flex-start; }
+      .col-#{$breakpoint}-center { align-self: center; }
+      .col-#{$breakpoint}-bottom { align-self: flex-end; }
+    }
+  }
+}
