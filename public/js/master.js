@@ -1,4 +1,4 @@
-console.log('3rd Party Scripts!');
+console.log("%c3rd Party Scripts!", "color: #A4CE39; font-size: 2rem;");
 (function($) {
 
   /* https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript */
@@ -8,7 +8,7 @@ console.log('3rd Party Scripts!');
     height : $(window).height(),
 
     /* https://github.com/louisremi/jquery-smartresize#minimalist-standalone-version */
-    resize: function(a, b) {
+    onResize: function(a, b) {
       onresize = function() {
         clearTimeout(b);
         b = setTimeout(a, 100);
@@ -16,14 +16,22 @@ console.log('3rd Party Scripts!');
       return a;
     },
 
-    onResize: function() {
+    resize: function() {
       this.width = $(window).width();
       this.height = $(window).height();
-      console.log('Resized!', 'Width: ' + this.width, 'Height: ' + this.height);
+      console.log("%cResized!", "color: #A4CE39; font-size: 2rem;");
+      console.info('Width: ' + this.width);
+      console.info('Height: ' + this.height);
     },
 
     ready: function() {
-      console.log('Document Ready!', 'Width: ' + this.width, 'Height: ' + this.height);
+      console.log("%cDocument Ready!", "color: #A4CE39; font-size: 2rem;");
+      console.info('Width: ' + this.width);
+      console.info('Height: ' + this.height);
+    },
+
+    load: function() {
+      console.log("%cWindow Loaded!", "color: #A4CE39; font-size: 2rem;");
     },
 
   };
@@ -35,12 +43,12 @@ console.log('3rd Party Scripts!');
 
   /* Document Loaded including images! */
   $(window).load(function(){
-    console.log('Window Loaded!');
+    Germinate.load();
   });
 
   /* Window Resize */
-  Germinate.resize(function() {
-    Germinate.onResize();
+  Germinate.onResize(function() {
+    Germinate.resize();
   });
 
 })(window.jQuery);

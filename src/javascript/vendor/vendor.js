@@ -1,1 +1,1 @@
-console.log('3rd Party Scripts!');
+console.log("%c3rd Party Scripts!", "color: #A4CE39; font-size: 2rem;");
