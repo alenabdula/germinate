@@ -1,9 +1,20 @@
 //
-// Example Component: Article
-.article {}
-.article-title {
+// Example article component
+.article {
+  border: 1px solid $brand_color_purple;
+  padding: 1rem;
+}
+.article__headline {
+  font-size: 3rem;
   line-height: 1.2;
+  font-weight: 100;
+  border-bottom: 1px solid $brand_color_purple;
+  padding-bottom: 2rem;
 }
-.article-byline {
-  font-size: 1rem;
+.article__byline {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: $brand_color_purple;
+  text-align: center;
 }
+.article__entry {}
