@@ -33,3 +33,61 @@ Helpful **Sublime Snippet** for using Media Queries.
   <description>Germinate: Custom Media Query</description>
 </snippet>
 ```
+
+Use as:
+
+```scss
+.component {
+  // default mobile-first breakpoint
+  background-color: rebeccapurple;
+  @include mq($from: sm) {
+    // breakpoint sm: 34em
+    background-color: #999;
+  }
+  @include mq($from: md) {
+    // breakpoint md: 48em
+    background-color: #666;
+  }
+  @include mq($from: lg) {
+    // breakpoint lg: 62em
+    background-color: #222;
+  }
+  @include mq($from: xl) {
+    // breakpoint xl: 75em
+    background-color: #000;
+  }
+}
+```
+
+Will produce following:
+
+```css
+/* default mobile */
+.component {
+  background-color: rebeccapurple;
+}
+/* sm */
+@media (min-width: 34em) {
+  .component {
+    background-color: #999;
+  }
+}
+/* md */
+@media (min-width: 48em) {
+  .component {
+    background-color: #666;
+  }
+}
+/* lg */
+@media (min-width: 62em) {
+  .component {
+    background-color: #222;
+  }
+}
+/* xl */
+@media (min-width: 75em) {
+  .component {
+    background-color: #000;
+  }
+}
+```

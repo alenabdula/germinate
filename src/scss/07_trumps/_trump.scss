@@ -1,3 +1,9 @@
 //
 //  Trumps
-//  Helper Classes & Overrides
+.is--hidden {
+  @include hidden;
+}
+
+.is--visiable {
+  @include unhidden;
+}
