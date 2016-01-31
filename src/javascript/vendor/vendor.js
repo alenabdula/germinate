@@ -1,1 +1,1 @@
-console.log('vendor');
+console.log('3rd Party Scripts!');
