@@ -2,6 +2,12 @@
 
 Project Boilerplate
 
+**Table of Content**
+
+1. [Getting Started](#getting-started)
+2. [Sublime Text Snippets](#sublime-text-snippets)
+3. [Inspired & Attributed](#inspired--attributed)
+
 ## Getting Started
 
 **Tools & Requirements**
