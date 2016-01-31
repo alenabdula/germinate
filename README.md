@@ -14,7 +14,7 @@ Project Boilerplate
 
 In order to use Gulp, our build system/script, you will need to install following dependencies:
 
-+ [NodeJS](http://nodejs.org), Also see [Installing Node.js via package manager](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager)
++ [NodeJS](http://nodejs.org), Also see [installing Node.js via package manager](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager)
 + From root folder run following commands:
   + `npm install -g gulp` installs Gulp globally
   + `npm install` installs our development dependencies from `composer.json` file.
@@ -23,7 +23,7 @@ In order to use Gulp, our build system/script, you will need to install followin
 
 ## Sublime Text Snippets
 
-Helpful **Sublime Snippet** for using Media Queries. [Sublime Text 3 - Snippet Docs](http://sublimetext.info/docs/en/extensibility/snippets.html). Master Sublime Text editor at [Laracasts.com](https://laracasts.com) by following [Sublime Text Mastery](https://laracasts.com/series/sublime-text-mastery) **free** series.
+Helpful **Sublime Snippet** for using Media Queries. [Sublime Text 3 - Snippet Docs](http://docs.sublimetext.info/en/latest/extensibility/snippets.html). Master Sublime Text editor at [Laracasts.com](https://laracasts.com) by following [Sublime Text Mastery](https://laracasts.com/series/sublime-text-mastery) **free** series.
 
 ```xml
 <snippet>
