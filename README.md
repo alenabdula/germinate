@@ -15,9 +15,9 @@ In order to use Gulp, our build system/script, you will need to install followin
   + And finally run `gulp` to start default Gulp task
   + To run Gulp tasks individually you would run `gulp <task name>` ex. `gulp scss` or `gulp javascript`.
 
-## Snippets
+## Sublime Text Snippets
 
-Helpful **Sublime Snippet** for using Media Queries.
+Helpful **Sublime Snippet** for using Media Queries. [Sublime Text 3 - Snippet Docs](http://sublimetext.info/docs/en/extensibility/snippets.html). Master Sublime Text editor at [Laracasts.com](https://laracasts.com) by following [Sublime Text Mastery](https://laracasts.com/series/sublime-text-mastery) **free** series.
 
 ```xml
 <snippet>
@@ -56,6 +56,14 @@ Use as:
     // breakpoint xl: 75em
     background-color: #000;
   }
+  @include mq($from: sm, $until: md) {
+    // breakpoint sm to md
+    padding: 1rem;
+  }
+  @include mq($from: md, $until: xl) {
+    // breakpoint md to xl
+    padding: 2rem;
+  }
 }
 ```
 
@@ -88,6 +96,18 @@ Will produce following:
 @media (min-width: 75em) {
   .component {
     background-color: #000;
+  }
+}
+/* sm to md */
+@media (min-width: 34em) and (max-width: 47.99em) {
+  .component {
+    padding: 1rem;
+  }
+}
+/* md to xl */
+@media (min-width: 48em) and (max-width: 74.99em) {
+  .component {
+    padding: 2rem;
   }
 }
 ```
