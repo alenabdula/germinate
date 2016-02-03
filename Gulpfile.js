@@ -24,8 +24,8 @@ gulp.task('scss', function() {
     return gulp.src(source)
       .pipe(sourcemaps.init())
       .pipe(sass({ outputStyle: 'expanded' }).on( 'error', sass.logError ))
-      .pipe(sourcemaps.write())
       .pipe(autoprefixer(prefixOptions))
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest(destination))
       .pipe(browserSync.reload({ stream: true }))
     ;
