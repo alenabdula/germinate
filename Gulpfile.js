@@ -1,25 +1,41 @@
-/* Environment: development | production */
-var Enviroment = 'development';
+"use strict";
 
-/* Modules */
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync');
-var uglify = require('gulp-uglify');
-var jshint = require('gulp-jshint');
-var jshintReporter = require('jshint-stylish');
-var concat = require('gulp-concat');
-var imagemin = require('gulp-imagemin');
-var changed = require('gulp-changed');
-var pngquant = require('imagemin-pngquant');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync');
+const uglify = require('gulp-uglify');
+const jshint = require('gulp-jshint');
+const jshintReporter = require('jshint-stylish');
+const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const pngquant = require('imagemin-pngquant');
+const argv = require('yargs').argv;
+const Enviroment = (argv.dev ? argv.dev : 'development');
+const rollup = require('rollup');
+const babel = require('rollup-plugin-babel');
+console.log(`Working Enviroment: ${Enviroment}!`);
+
+/* ES6 Modules */
+gulp.task('rollup', () => {
+  let entry   = './src/javascript/master-es6.js';
+  let dest    = './public/js/master-es6.js';
+  let plugins = [babel()];
+  rollup.rollup({ entry, plugins }).then( (bundle) => {
+    let format = 'umd'; /* amd, cjs, es6, iife, umd */
+    let globals = { Vue: 'vue' };
+    let result = bundle.generate({ format, globals });
+    bundle.write({ format, dest });
+  });
+});
 
 /* Style */
-gulp.task('scss', function() {
-  var source = './src/scss/master.scss';
-  var destination = './public/css/';
-  var prefixOptions = { browsers: ['last 3 versions', '> 5%', 'Firefox ESR'] };
+gulp.task('scss', () => {
+  let source = './src/scss/master.scss';
+  let destination = './public/css/';
+  let prefixOptions = { browsers: ['last 3 versions', '> 5%', 'Firefox ESR'] };
   if (Enviroment === 'development') {
     return gulp.src(source)
       .pipe(sourcemaps.init())
@@ -40,12 +56,12 @@ gulp.task('scss', function() {
 });
 
 /* JavaScript */
-gulp.task('javascript', function() {
-  var source = [
+gulp.task('javascript', () => {
+  let source = [
     './src/javascript/vendor/**/*.js',
     './src/javascript/master.js',
   ];
-  var destination = './public/js/';
+  let destination = './public/js/';
   if (Enviroment === 'development') {
     return gulp.src(source)
       .pipe(jshint())
@@ -64,10 +80,10 @@ gulp.task('javascript', function() {
 });
 
 /* Images */
-gulp.task('images', function() {
-  var source = './src/images/**/*';
-  var destination = './public/img';
-  var minOptions = {
+gulp.task('images', () => {
+  let source = './src/images/**/*';
+  let destination = './public/img';
+  let minOptions = {
     progressive: true,
     svgoPlugins: [{removeViewBox: false}],
     use: [pngquant()]
@@ -80,7 +96,7 @@ gulp.task('images', function() {
 });
 
 /* BrowserSync */
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
   browserSync({
   // Option 1
   server: {
@@ -92,26 +108,31 @@ gulp.task('browser-sync', function() {
 });
 
 /* BrowserSync Manual Reload */
-gulp.task('browser-sync-reload', function() {
+gulp.task('browser-sync-reload', () => {
   browserSync.reload();
 });
 
 /* Helpers */
 function consoleEventReporter(event) {
-  console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+  console.log(`File ${event.path} was ${event.type}, running tasks...`);
 }
 
 /* Watch */
-gulp.task('default', ['browser-sync'], function() {
+gulp.task('default', ['browser-sync'], () => {
+
+  /* ES6 */
+  gulp.watch(['./src/javascript/master-es6.js', './src/javascript/modules/**/*.js'], ['rollup'])
+    .on('change', (event) => { consoleEventReporter(event);});
+
   /* Style */
   gulp.watch(['./src/scss/*.scss', './src/scss/**/*.scss'], ['scss'])
-    .on('change', function(event) { consoleEventReporter(event);});
+    .on('change', (event) => { consoleEventReporter(event);});
 
   /* JavaScript */
   gulp.watch(['./src/javascript/*.js', './src/javascript/**/*.js'], ['javascript'])
-    .on('change', function(event) { consoleEventReporter(event);});
+    .on('change', (event) => { consoleEventReporter(event);});
 
   /* HTML */
   gulp.watch(['./public/**/*.html', './public/*.html'], ['browser-sync-reload'])
-    .on('change', function(event) { consoleEventReporter(event);});
+    .on('change', (event) => { consoleEventReporter(event);});
 });
