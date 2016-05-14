@@ -25,8 +25,7 @@ gulp.task('rollup', () => {
   let plugins = [babel()];
   rollup.rollup({ entry, plugins }).then( (bundle) => {
     let format = 'umd'; /* amd, cjs, es6, iife, umd */
-    let globals = { Vue: 'vue' };
-    let result = bundle.generate({ format, globals });
+    let result = bundle.generate({ format });
     bundle.write({ format, dest });
   });
 });
