@@ -5,29 +5,42 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
-const uglify = require('gulp-uglify');
-const jshint = require('gulp-jshint');
-const jshintReporter = require('jshint-stylish');
-const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
+const rename = require('gulp-rename');
 const pngquant = require('imagemin-pngquant');
 const argv = require('yargs').argv;
-const Enviroment = (argv.dev ? argv.dev : 'development');
 const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
+const Enviroment = (argv.dev ? argv.dev : 'development');
 console.log(`Working Enviroment: ${Enviroment}!`);
 
 /* ES6 Modules */
 gulp.task('rollup', () => {
-  let entry   = './src/javascript/master-es6.js';
-  let dest    = './public/js/master-es6.js';
+  let entry   = './src/js/master.js';
+  let dest    = './public/js/master.js';
   let plugins = [babel()];
   rollup.rollup({ entry, plugins }).then( (bundle) => {
     let format = 'umd'; /* amd, cjs, es6, iife, umd */
     let result = bundle.generate({ format });
     bundle.write({ format, dest });
   });
+});
+
+/* Test renaming snippet */
+gulp.task('rename', () => {
+  let source = './public/js/master.js';
+  let destination = './public/js';
+  return gulp.src(source, { base: process.cwd() })
+    .pipe(rename({
+      dirname: "",
+      basename: "master",
+      prefix: "",
+      suffix: "-min",
+      extname: ".js"
+    }))
+    .pipe(gulp.dest(destination))
+  ;
 });
 
 /* Style */
@@ -49,30 +62,6 @@ gulp.task('scss', () => {
     return gulp.src(source)
       .pipe(sass({ outputStyle: 'compressed' }).on( 'error', sass.logError ))
       .pipe(autoprefixer(prefixOptions))
-      .pipe(gulp.dest(destination))
-    ;
-  }
-});
-
-/* JavaScript */
-gulp.task('javascript', () => {
-  let source = [
-    './src/javascript/vendor/**/*.js',
-    './src/javascript/master.js',
-  ];
-  let destination = './public/js/';
-  if (Enviroment === 'development') {
-    return gulp.src(source)
-      .pipe(jshint())
-      .pipe(jshint.reporter(jshintReporter))
-      .pipe(concat('master.js'))
-      .pipe(gulp.dest(destination))
-    ;
-  }
-  else {
-    return gulp.src(source)
-      .pipe(concat('master.js'))
-      .pipe(uglify())
       .pipe(gulp.dest(destination))
     ;
   }

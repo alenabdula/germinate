@@ -16,7 +16,7 @@ In order to use Gulp, our build system/script, you will need to install followin
 
 Get the latest node modules __Not Tested!__
 
-`npm install --save-dev browser-sync gulp gulp-autoprefixer gulp-changed gulp-concat gulp-imagemin gulp-jshint gulp-sass gulp-sourcemaps gulp-uglify imagemin-pngquant jshint jshint-stylish rollup rollup-plugin-babel yargs`
+`npm install --save-dev babel-preset-es2015 browser-sync gulp gulp-autoprefixer gulp-changed gulp-imagemin gulp-rename gulp-sass gulp-sourcemaps imagemin-pngquant rollup rollup-plugin-babel yargs`
 
 + [NodeJS](http://nodejs.org), Also see [installing Node.js via package manager](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager)
 + From root folder run following commands:
