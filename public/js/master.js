@@ -9,24 +9,40 @@
   var Germinate = {
     width: $(window).width(),
     height: $(window).height(),
-    onResize: function(a, b) {
-      onresize = function() {
+    button: $('.example button'),
+    body: $('body'),
+    onResize: function (a, b) {
+      onresize = function () {
         clearTimeout(b);
         b = setTimeout(a, 100);
       };
       return a;
     },
+    consoleReport: function(type) {
+      console.log(("%c" + type), "color: #A4CE39; font-size: 2rem;");
+      console.info(("Width: " + (this.width) + " and Height: " + (this.height)));
+    },
     resize: function() {
       this.width = $(window).width();
       this.height = $(window).height();
-      console.log("%cResized!", "color: #A4CE39; font-size: 2rem;");
-      console.info('Width: ' + this.width);
-      console.info('Height: ' + this.height);
+      this.consoleReport('Resized');
     },
     ready: function() {
-      console.log("%cDocument Ready!", "color: #A4CE39; font-size: 2rem;");
-      console.info('Width: ' + this.width);
-      console.info('Height: ' + this.height);
+      this.changeBackgroundColor();
+      this.interactiveButton();
+      this.consoleReport('Ready');
+    },
+    interactiveButton: function() {
+      var self = this;
+      this.button.on('click', function (event) {
+        event.preventDefault;
+        self.changeBackgroundColor('inherit');
+      } );
+    },
+    changeBackgroundColor: function(val) {
+      if ( val === void 0 ) val = 'red';
+
+      this.body.css('backgroundColor', val);
     }
   };
 

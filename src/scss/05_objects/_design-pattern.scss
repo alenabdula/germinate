@@ -1,0 +1,11 @@
+//
+//  Define your own design pattern
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  @include mq($from: md) {
+    background: red;
+  }
+}

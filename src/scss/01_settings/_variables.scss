@@ -1,20 +1,20 @@
 //
 // Brand Colors
-$brand_color_green: #A4CE39 !default;
-$brand_color_purple: rebeccapurple !default;
+$brand_color_green: #A4CE39;
+$brand_color_purple: rebeccapurple;
 //
 // Default Colors
-$html_background: #FFFFEE !default;
-$html_text_color: #222 !default;
+$html_background: #FFFFEE;
+$html_text_color: #222;
 $html_link_color: $brand_color_green;
 $html_border_color: #ccc;
 $html_text_selection_color: rgba($html_link_color, 0.5);
 //
 //  Typography
-$html_font_family: Georgia, Droid Serif, serif !default;
-$html_line_height: 1.6 !default;
-$open_blockquote: '"' !default;
-$close_blockquote: '"' !default;
+$html_font_family: Georgia, Droid Serif, serif;
+$html_line_height: 1.6;
+$open_blockquote: '"';
+$close_blockquote: '"';
 $headlines: (
   h1: 1.802em,
   h2: 1.602em,
@@ -22,25 +22,17 @@ $headlines: (
   h4: 1.266em,
   h5: 1.125em,
   h6: 1em
-) !default;
+);
 //
 //  Media Queries
-$mq_base_font_size: 16px !default;
-$mq_responsive: true !default;
+$mq_base_font_size: 16px;
+$mq_responsive: true;
 $mq_breakpoints: (
   xs: 0,
   sm: 34em,
   md: 48em,
   lg: 62em,
   xl: 75em
-) !default;
-$mq_static_breakpoint: lg !default;
-$mq_media_type: all !default;
-//
-// Grid
-$grid_columns: 12 !default;
-$enable_flex: true !default;
-$grid_gutter_width: 1.875rem !default;
-$enable_grid_classes: true !default;
-$grid_breakpoints: $mq_breakpoints;
-$container_max_widths: ( sm: 36em, md: 45em, lg: 58.75em, xl: 71.25em) !default;
+);
+$mq_static_breakpoint: lg;
+$mq_media_type: all;

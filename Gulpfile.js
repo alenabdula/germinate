@@ -49,7 +49,7 @@ gulp.task('rename:js', () => {
 gulp.task('scss', () => {
   let source = './src/scss/master.scss';
   let destination = './public/css/';
-  let prefixOptions = { browsers: ['last 3 versions', '> 5%', 'Firefox ESR'] };
+  let prefixOptions = { browsers: ['last 2 versions'] };
   if (DEV) {
     return gulp.src(source)
       .pipe(sourcemaps.init())

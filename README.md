@@ -19,7 +19,7 @@ In order to use Gulp, our build system/script, you will need to install followin
   + `npm install -g gulp` installs Gulp globally
   + `npm install` installs our development dependencies from `composer.json` file.
   + And finally run `gulp` to start default Gulp task
-  + To run Gulp tasks individually you would run `gulp <task name>` ex. `gulp scss` or `gulp javascript`.
+  + To run Gulp tasks individually you would run `gulp <task name>` ex. `gulp scss` or `gulp rollup`.
 
 ## Sublime Text Snippets
 
