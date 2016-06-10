@@ -1,34 +1,35 @@
 "use strict";
 
-const gulp = require('gulp');
-const sass = require('gulp-sass');
+const gulp         = require('gulp');
+const sass         = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
-const browserSync = require('browser-sync');
-const imagemin = require('gulp-imagemin');
-const changed = require('gulp-changed');
-const rename = require('gulp-rename');
-const pngquant = require('imagemin-pngquant');
-const argv = require('yargs').argv;
-const rollup = require('rollup');
-const babel = require('rollup-plugin-babel');
-const Enviroment = (argv.dev ? argv.dev : 'development');
-console.log(`Working Enviroment: ${Enviroment}!`);
+const sourcemaps   = require('gulp-sourcemaps');
+const browserSync  = require('browser-sync');
+const imagemin     = require('gulp-imagemin');
+const changed      = require('gulp-changed');
+const rename       = require('gulp-rename');
+const pngquant     = require('imagemin-pngquant');
+const rollup       = require('rollup');
+const buble        = require('rollup-plugin-buble');
+const DEV          = true;
 
-/* ES6 Modules */
+/**
+ *  Rollup.js Gulp Task for bu
+ */
 gulp.task('rollup', () => {
   let entry   = './src/js/master.js';
   let dest    = './public/js/master.js';
-  let plugins = [babel()];
+  let plugins = [ buble(), ];
   rollup.rollup({ entry, plugins }).then( (bundle) => {
     let format = 'umd'; /* amd, cjs, es6, iife, umd */
     let result = bundle.generate({ format });
     bundle.write({ format, dest });
   });
 });
-
-/* Test renaming snippet */
-gulp.task('rename', () => {
+/**
+ *  Example Gulp task for renaming files
+ */
+gulp.task('rename:js', () => {
   let source = './public/js/master.js';
   let destination = './public/js';
   return gulp.src(source, { base: process.cwd() })
@@ -42,13 +43,14 @@ gulp.task('rename', () => {
     .pipe(gulp.dest(destination))
   ;
 });
-
-/* Style */
+/**
+ *  SCSS Default task
+ */
 gulp.task('scss', () => {
   let source = './src/scss/master.scss';
   let destination = './public/css/';
   let prefixOptions = { browsers: ['last 3 versions', '> 5%', 'Firefox ESR'] };
-  if (Enviroment === 'development') {
+  if (DEV) {
     return gulp.src(source)
       .pipe(sourcemaps.init())
       .pipe(sass({ outputStyle: 'expanded' }).on( 'error', sass.logError ))
@@ -66,8 +68,9 @@ gulp.task('scss', () => {
     ;
   }
 });
-
-/* Images */
+/**
+ *  Images Gulp task for optimizing images
+ */
 gulp.task('images', () => {
   let source = './src/images/**/*';
   let destination = './public/img';
@@ -82,8 +85,9 @@ gulp.task('images', () => {
     .pipe(gulp.dest(destination))
   ;
 });
-
-/* BrowserSync */
+/**
+ *  BrowserSync Gulp task for reloading browser
+ */
 gulp.task('browser-sync', () => {
   browserSync({
   // Option 1
@@ -94,33 +98,35 @@ gulp.task('browser-sync', () => {
   // proxy: "germinate.dev",
   });
 });
-
-/* BrowserSync Manual Reload */
+/**
+ *  BrowserSync Manual Reload Gulp helper task
+ */
 gulp.task('browser-sync-reload', () => {
   browserSync.reload();
 });
-
-/* Helpers */
+/**
+ *  Helper functions
+ */
 function consoleEventReporter(event) {
   console.log(`File ${event.path} was ${event.type}, running tasks...`);
 }
-
-/* Watch */
+/**
+ *  Default Gulp Task
+ */
 gulp.task('default', ['browser-sync'], () => {
-
-  /* ES6 */
-  gulp.watch(['./src/javascript/master-es6.js', './src/javascript/modules/**/*.js'], ['rollup'])
-    .on('change', (event) => { consoleEventReporter(event);});
-
-  /* Style */
+  /**
+   *  Rollup.js Module Bundling watch Gulp task
+   */
+  gulp.watch(['./src/js/master.js', './src/js/modules/**/*.js'], ['rollup', 'browser-sync-reload'])
+    .on('change', (event) => { consoleEventReporter(event); });
+  /**
+   *  SCSS watch Gulp task
+   */
   gulp.watch(['./src/scss/*.scss', './src/scss/**/*.scss'], ['scss'])
-    .on('change', (event) => { consoleEventReporter(event);});
-
-  /* JavaScript */
-  gulp.watch(['./src/javascript/*.js', './src/javascript/**/*.js'], ['javascript'])
-    .on('change', (event) => { consoleEventReporter(event);});
-
-  /* HTML */
+    .on('change', (event) => { consoleEventReporter(event); });
+  /**
+   *  HTML watch Gulp task
+   */
   gulp.watch(['./public/**/*.html', './public/*.html'], ['browser-sync-reload'])
-    .on('change', (event) => { consoleEventReporter(event);});
+    .on('change', (event) => { consoleEventReporter(event); });
 });

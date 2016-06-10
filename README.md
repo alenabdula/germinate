@@ -14,10 +14,6 @@ Project Boilerplate
 
 In order to use Gulp, our build system/script, you will need to install following dependencies:
 
-Get the latest node modules __Not Tested!__
-
-`npm install --save-dev babel-preset-es2015 browser-sync gulp gulp-autoprefixer gulp-changed gulp-imagemin gulp-rename gulp-sass gulp-sourcemaps imagemin-pngquant rollup rollup-plugin-babel yargs`
-
 + [NodeJS](http://nodejs.org), Also see [installing Node.js via package manager](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager)
 + From root folder run following commands:
   + `npm install -g gulp` installs Gulp globally

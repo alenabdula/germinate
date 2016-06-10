@@ -1,0 +1,19 @@
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+//
+// Button Component
+.button {
+  border: none;
+  padding: 1rem 2.3rem;
+  color: black;
+  &:hover {
+    color: white;
+  }
+  &:active {
+    background-color: gray;
+  }
+}
