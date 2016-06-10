@@ -2,7 +2,10 @@
   "private": true,
   "name": "germinate",
   "version": "0.0.1",
-  "scripts": {},
+  "scripts": {
+    "dev": "gulp",
+    "rollup": "rollup -c"
+  },
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",

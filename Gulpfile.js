@@ -14,7 +14,7 @@ const buble        = require('rollup-plugin-buble');
 const DEV          = true;
 
 /**
- *  Rollup.js Gulp Task for bu
+ *  Rollup.js Gulp Task for bundling JavaScript Modules
  */
 gulp.task('rollup', () => {
   let entry   = './src/js/master.js';
