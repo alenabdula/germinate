@@ -123,7 +123,6 @@ Will produce following:
 Much of the code and thinking is inspired by and attributed to:
 
 + Harry Roberts - [Managing CSS Projects with ITCSS, YouTube](https://youtu.be/1OKZOV-iLj4?t=7m25s)
-+ Bootstrap - [Bootstrap v4 - Grid](https://github.com/twbs/bootstrap/tree/v4-dev)
 + jQuery SmartResize - [Minimalist Standalone Version](https://github.com/louisremi/jquery-smartresize#minimalist-standalone-version)
 + Learning JavaScript Design Patterns, A book by Addy Osmani - [Module JavaScript Pattern](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript)
 + Media Queries with superpowers - [mq](https://github.com/sass-mq/sass-mq)

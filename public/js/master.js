@@ -50,3 +50,4 @@
   Germinate.onResize( function () { Germinate.resize(); });
 
 }));
+//# sourceMappingURL=master.js.map

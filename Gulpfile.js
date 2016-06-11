@@ -22,8 +22,9 @@ gulp.task('rollup', () => {
   let plugins = [ buble(), ];
   rollup.rollup({ entry, plugins }).then( (bundle) => {
     let format = 'umd'; /* amd, cjs, es6, iife, umd */
+    let sourceMap = true;
     let result = bundle.generate({ format });
-    bundle.write({ format, dest });
+    bundle.write({ format, sourceMap, dest });
   });
 });
 /**
