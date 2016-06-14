@@ -1,68 +1,8 @@
 //
-// Media Queries
-@mixin mq(
-  $from: false,
-  $until: false,
-  $and: false,
-  $media_type: $mq_media_type,
-  $breakpoints: $mq_breakpoints,
-  $responsive: $mq_responsive,
-  $static_breakpoint: $mq_static_breakpoint
-) {
-  $min_width: 0;
-  $max_width: 0;
-  $media_query: '';
-
-  // From: this breakpoint (inclusive)
-  @if $from {
-    @if type-of($from) == number {
-      $min_width: mq_px2em($from);
+// Simple Mobile-First Media Queries
+@mixin mq($name: 'mobile') {
+    $width: get_responsive_breakpoint_width($name);
+    @media (min-width: #{$width}) {
+        @content;
     }
-    @else {
-      $min_width: mq_px2em(mq_get_breakpoint_width($from, $breakpoints));
-    }
-  }
-
-  // Until: that breakpoint (exclusive)
-  @if $until {
-    @if type-of($until) == number {
-      $max_width: mq_px2em($until);
-    }
-    @else {
-      $max_width: mq_px2em(mq_get_breakpoint_width($until, $breakpoints)) - .01em;
-    }
-  }
-
-  // Responsive support is disabled, rasterize the output outside @media blocks
-  // The browser will rely on the cascade itself.
-  @if $responsive == false {
-    $static_breakpoint-width: mq_get_breakpoint_width($static_breakpoint, $breakpoints);
-    $target-width: mq_px2em($static_breakpoint-width);
-    // Output only rules that start at or span our target width
-    @if ($and == false and $min_width <= $target-width and ($until == false or $max_width >= $target-width) ) {
-      @content;
-    }
-  }
-
-  // Responsive support is enabled, output rules inside @media queries
-  @else {
-    @if $min_width != 0 { $media_query: '#{$media_query} and (min-width: #{$min_width})'; }
-    @if $max_width != 0 { $media_query: '#{$media_query} and (max-width: #{$max_width})'; }
-    @if $and            { $media_query: '#{$media_query} and #{$and}'; }
-    // Remove unnecessary media query prefix 'all and '
-    @if ($media_type == 'all' and $media_query != '') {
-      $media_type: '';
-      $media_query: str-slice(unquote($media_query), 6);
-    }
-    @media #{$media_type + $media_query} {
-      @content;
-    }
-  }
-}
-//
-// Add a Breakpoint
-// example: @include mq-add-breakpoint(tvscreen, 1920px);
-@mixin mq_add_breakpoint($name, $width) {
-  $new-breakpoint: ($name: $width);
-  $mq_breakpoints: map-merge($mq_breakpoints, $new-breakpoint) !global;
 }

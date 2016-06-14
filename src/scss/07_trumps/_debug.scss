@@ -1,0 +1,23 @@
+//
+// Testing
+
+@if $debug {
+body:before {
+    display: block;
+    content: 'mobile-first';
+    font-family: monospace;
+    text-align: center;
+    @include mq(baby) {
+        content: 'baby';
+    }
+    @include mq(toddler) {
+        content: 'toddler';
+    }
+    @include mq(teenager) {
+        content: 'teenager';
+    }
+    @include mq(adult) {
+        content: 'adult';
+    }
+}
+}

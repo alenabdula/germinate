@@ -1,4 +1,7 @@
 //
+// Debug Mode
+$debug: true;
+//
 // Brand Colors
 $brand_color_green: #A4CE39;
 $brand_color_purple: rebeccapurple;
@@ -16,23 +19,18 @@ $html_line_height: 1.6;
 $open_blockquote: '"';
 $close_blockquote: '"';
 $headlines: (
-  h1: 1.802em,
-  h2: 1.602em,
-  h3: 1.424em,
-  h4: 1.266em,
-  h5: 1.125em,
-  h6: 1em
+    h1: 1.802em,
+    h2: 1.602em,
+    h3: 1.424em,
+    h4: 1.266em,
+    h5: 1.125em,
+    h6: 1em,
 );
 //
-//  Media Queries
-$mq_base_font_size: 16px;
-$mq_responsive: true;
-$mq_breakpoints: (
-  xs: 0,
-  sm: 34em,
-  md: 48em,
-  lg: 62em,
-  xl: 75em
+// Mobile-First, Major Layout Responsive Breakpoints
+$responsive_breakpoints: (
+    baby: 34em,
+    toddler: 48em,
+    teenager: 62em,
+    adult: 75em,
 );
-$mq_static_breakpoint: lg;
-$mq_media_type: all;

@@ -4,10 +4,23 @@
   border: none;
   padding: 1rem 2.3rem;
   color: black;
+  background-color: gray;
   &:hover {
     color: white;
   }
   &:active {
-    background-color: gray;
+    background-color: orange;
+  }
+  @include mq(baby) {
+    background-color: green;
+  }
+  @include mq(toddler) {
+    background-color: blue;
+  }
+  @include mq(teenager) {
+    background-color: purple;
+  }
+  @include mq(adult) {
+    background-color: yellow;
   }
 }
