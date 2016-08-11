@@ -2,25 +2,6 @@
 
 Project Boilerplate
 
-**Table of Content**
-
-1. [Getting Started](#getting-started)
-2. [Inspired & Attributed](#inspired--attributed)
-
-## Getting Started
-
-**Tools & Requirements**
-
-In order to use Gulp, our build system/script, you will need to install following dependencies:
-
-+ [NodeJS](http://nodejs.org), Also see [installing Node.js via package manager](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager)
-+ From root folder run following commands:
-  + `npm install -g gulp` installs Gulp globally
-  + `npm install` installs our development dependencies from `composer.json` file.
-  + And finally run `gulp` to start default Gulp task
-  + To run Gulp tasks individually you would run `gulp <task name>` ex. `gulp scss` or `gulp rollup`.
-+ installing latest: `npm install --save-dev browser-sync gulp gulp-autoprefixer gulp-changed gulp-imagemin gulp-rename gulp-sass gulp-sourcemaps imagemin-pngquant rollup rollup-plugin-buble`
-
 ## Inspired & Attributed
 
 Much of the code and thinking is inspired by and attributed to:
