@@ -1,16 +1,16 @@
 //
 // Site Defaults
 html {
-  background: $html_background;
+  background: $color_background;
   min-height: 100%;
   overflow-y: scroll;
 }
 
 body {
   margin: 0;
-  font-family: $html_font_family;
+  font-family: $font_family_text;
   font-size: 100%;
-  line-height: $html_line_height;
+  line-height: $line_height;
   background-color: transparent;
-  color: $html_text_color;
+  color: $color_text;
 }

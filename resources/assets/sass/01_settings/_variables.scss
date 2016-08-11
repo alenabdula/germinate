@@ -1,36 +1,71 @@
 //
-// Debug Mode
+// Debug mode.
 $debug: true;
 //
-// Brand Colors
-$brand_color_green: #A4CE39;
-$brand_color_purple: rebeccapurple;
+// Primary colors.
+$leaf : #A4CE39;
+$ocean: #0194BC;
+// Secondary colors.
+$honey   : #E8A03F;
+$lavender: rebeccapurple;
 //
-// Default Colors
-$html_background: #FFFFEE;
-$html_text_color: #222;
-$html_link_color: $brand_color_green;
-$html_border_color: #ccc;
-$html_text_selection_color: rgba($html_link_color, 0.5);
+// Neutral colors
+$white      : #FFFFEE;
+$black      : #222;
+$gray_light : #e0e5ee;
+$gray_medium: #d1d5dc;
+$gray_dark  : #babdc3;
 //
-//  Typography
-$html_font_family: Georgia, Droid Serif, serif;
-$html_line_height: 1.6;
-$open_blockquote: '"';
+// Usage.
+$color_primary          : $leaf;
+$color_accent           : $honey;
+$color_shadow           : $ocean;
+$color_background       : $white;
+$color_background_invert: $black;
+$color_text             : $black;
+$color_text_invert      : $white;
+$color_text_weak        : lighten($black, 10%);
+$color_text_selection   : rgba($leaf, 0.5);
+$color_text_link        : $leaf;
+$color_text_link_visited: $leaf;
+$color_text_link_hover  : darken($leaf, 10%);
+$color_border           : $gray_light;
+//
+// Font family.
+$font_family_text   : Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+$font_family_display: sans-serif;
+$font_family_code   : monospace;
+//
+// Font sizes.
+$font_size_small    : 12px;
+$font_size_regular  : 16px;
+$font_size_large    : 24px;
+$font_size_x_large  : 32px;
+$font_size_xx_large : 48px;
+$font_size_xxx_large: 64px;
+//
+// Font weights.
+$font_weight_light  : 100;
+$font_weight_regular: 400;
+$font_weight_bold   : 700;
+//
+// Line height.
+$line_height: 1.6;
+//
+// Spacing
+$spacing_small    : 0.3rem;
+$spacing_regular  : 1rem;
+$spacing_large    : 1.25rem;
+$spacing_x_large  : 1.46rem;
+//
+// Block quotes.
+$open_blockquote : '"';
 $close_blockquote: '"';
-$headlines: (
-    h1: 1.802em,
-    h2: 1.602em,
-    h3: 1.424em,
-    h4: 1.266em,
-    h5: 1.125em,
-    h6: 1em,
-);
 //
-// Mobile-First, Major Layout Responsive Breakpoints
+// Major responsive, mobile-first breakpoints.
 $responsive_breakpoints: (
-    baby: 34em,
-    toddler: 48em,
+    baby    : 34em,
+    toddler : 48em,
     teenager: 62em,
-    adult: 75em,
+    adult   : 75em,
 );

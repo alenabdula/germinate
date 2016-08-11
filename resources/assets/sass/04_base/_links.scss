@@ -2,19 +2,19 @@
 // Links
 a {
   background: transparent;
-  color: $html_link_color;
+  color: $color_text_link;
   text-decoration: none;
-  &:visited {}
+  &:visited {
+    color: $color_text_link_visited;
+  }
   &:active {
-    background-color: $html_link_color;
-    color: $html_text_color;
     outline: 0;
   }
   &:hover {
-    border-bottom: 2px solid $html_link_color;
     outline: 0;
+    color: $color_text_link_hover;
   }
   &:focus {
-    outline-color: $html_link_color;
+    outline-color: $color_text_link;
   }
 }

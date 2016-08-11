@@ -2,14 +2,10 @@
 
 const elixir = require('laravel-elixir');
 
-elixir(function(mix) {
-
-});
-
 elixir( (mix) => {
 
     mix.browserSync({
-        files: ['./public/**/*.html'],
+        files: ['./public/**/*'],
         proxy: 'germinate.dev',
     });
 

@@ -16,13 +16,10 @@
 *, *:before, *:after {
   box-sizing: border-box; }
 
-.cf:before, .cf:after,
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   display: table; }
 
-.cf:after,
 .clearfix:after {
   clear: both; }
 
@@ -62,11 +59,14 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, Droid Serif, serif;
-  font-size: 100%;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  font-size: 90%;
   line-height: 1.6;
   background-color: transparent;
   color: #222; }
+  @media (min-width: 48em) {
+    body {
+      font-size: 100%; } }
 
 button,
 input,
@@ -117,7 +117,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
-  border: 1px solid #ccc;
+  border: 1px solid #e0e5ee;
   margin: 0;
   padding: 1rem; }
 
@@ -147,13 +147,13 @@ a {
   background: transparent;
   color: #A4CE39;
   text-decoration: none; }
+  a:visited {
+    color: #A4CE39; }
   a:active {
-    background-color: #A4CE39;
-    color: #222;
     outline: 0; }
   a:hover {
-    border-bottom: 2px solid #A4CE39;
-    outline: 0; }
+    outline: 0;
+    color: #86aa2a; }
   a:focus {
     outline-color: #A4CE39; }
 
@@ -185,35 +185,8 @@ em, i {
 dfn {
   font-style: italic; }
 
-h1 {
-  font-size: 1.802em;
-  margin: 0;
-  margin-bottom: 1rem; }
-
-h2 {
-  font-size: 1.602em;
-  margin: 0;
-  margin-bottom: 1rem; }
-
-h3 {
-  font-size: 1.424em;
-  margin: 0;
-  margin-bottom: 1rem; }
-
-h4 {
-  font-size: 1.266em;
-  margin: 0;
-  margin-bottom: 1rem; }
-
-h5 {
-  font-size: 1.125em;
-  margin: 0;
-  margin-bottom: 1rem; }
-
-h6 {
-  font-size: 1em;
-  margin: 0;
-  margin-bottom: 1rem; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
 
 mark {
   background: rgba(164, 206, 57, 0.5);
@@ -240,7 +213,7 @@ hr {
   height: 0; }
 
 kbd {
-  border: 1px solid #ccc;
+  border: 1px solid #FFFFEE;
   padding: 0.25rem; }
 
 samp,
@@ -251,8 +224,7 @@ samp,
 pre {
   padding: 1rem;
   overflow: auto;
-  margin: 0;
-  background-color: rgba(164, 206, 57, 0.5); }
+  margin: 0; }
 
 blockquote {
   margin: 1rem;

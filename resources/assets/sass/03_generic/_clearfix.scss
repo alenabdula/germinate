@@ -1,9 +1,6 @@
 //
-// Clear Floats
-.cf,
-%cf,
-.clearfix,
-%clearfix {
+// Clear floats.
+.clearfix {
   &:before,
   &:after {
     content: " ";

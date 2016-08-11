@@ -1,5 +1,11 @@
 //
 // Mixins
+@mixin font_size_small { font-size: px2em($font_size_small); }
+@mixin font_size_regular { font-size: px2em($font_size_regular); }
+@mixin font_size_large { font-size: px2em($font_size_large); }
+@mixin font_size_x_large { font-size: px2em($font_size_x_large); }
+@mixin font_size_xx_large { font-size: px2em($font_size_xx_large); }
+@mixin font_size_xxx_large { font-size: px2em($font_size_xxx_large); }
 
 @mixin hidden {
   display: none;

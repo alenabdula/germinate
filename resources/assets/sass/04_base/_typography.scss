@@ -1,11 +1,11 @@
 //
 // Typography
 ::selection {
-  background: $html_text_selection_color;
+  background: $color_text_selection;
 }
 
 abbr[title] {
-  border-bottom: 2px dotted $html_text_selection_color;
+  border-bottom: 2px dotted $color_text_selection;
 }
 
 b, strong {
@@ -20,19 +20,13 @@ dfn {
   font-style: italic;
 }
 
-//
-// Generate Headline Elements
-@each $element, $size in $headlines {
-  #{$element} {
-    font-size: $size;
-    margin: 0;
-    margin-bottom: 1rem;
-  }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
 mark {
-  background: $html_text_selection_color;
-  color: $html_text_color;
+  background: $color_text_selection;
+  color: $color_text;
   padding: 2px;
 }
 
@@ -61,7 +55,7 @@ hr {
 }
 
 kbd {
-  border: 1px solid $html_border_color;
+  border: 1px solid $color_background;
   padding: 0.25rem;
 }
 
@@ -74,7 +68,6 @@ pre {
   padding: 1rem;
   overflow: auto;
   margin: 0;
-  background-color: $html_text_selection_color;
 }
 
 blockquote {
