@@ -60,13 +60,10 @@ html {
 body {
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
-  font-size: 90%;
+  font-size: 100%;
   line-height: 1.6;
   background-color: transparent;
   color: #222; }
-  @media (min-width: 48em) {
-    body {
-      font-size: 100%; } }
 
 button,
 input,
@@ -186,7 +183,26 @@ dfn {
   font-style: italic; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+  line-height: 1; }
+
+h1 {
+  font-size: 3.583em; }
+
+h2 {
+  font-size: 2.074em; }
+
+h3 {
+  font-size: 1.728em; }
+
+h4 {
+  font-size: 1.44em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: inherit; }
 
 mark {
   background: rgba(164, 206, 57, 0.5);

@@ -9,15 +9,20 @@ window.$ = window.jQuery = require('jquery');
 import Germinate from './components/Germinate';
 
 /**
- * jQuery on document ready.
+ * Application entry point.
  */
-$(document).ready( () => {
-    Germinate.ready();
-});
+if ( document.documentElement.className.match(/\has-js\b/) ) {
+    /**
+     * jQuery on document ready.
+     */
+    $(document).ready( () => {
+        Germinate.ready();
+    });
 
-/**
- * jQuery on window resize.
- */
-Germinate.onResize( () => {
-    Germinate.resize();
-});
+    /**
+     * jQuery on window resize.
+     */
+    Germinate.onResize( () => {
+        Germinate.resize();
+    });
+}
