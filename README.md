@@ -6,6 +6,7 @@ Project Boilerplate
 
 Much of the code and thinking is inspired by and attributed to:
 
++ loadJS [A simple function for asynchronously loading JavaScript files](https://github.com/filamentgroup/loadJS)
 + Harry Roberts - [Managing CSS Projects with ITCSS, YouTube](https://youtu.be/1OKZOV-iLj4?t=7m25s)
 + jQuery SmartResize - [Minimalist Standalone Version](https://github.com/louisremi/jquery-smartresize#minimalist-standalone-version)
 + A new micro clearfix hack by Nicolas Gallagher - [clearfix](http://nicolasgallagher.com/micro-clearfix-hack)
