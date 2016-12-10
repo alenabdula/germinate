@@ -189,7 +189,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 fieldset {
-  border: 1px solid #b5b5b5;
+  border: 1px solid #ced4da;
   margin: 0;
   padding: 1rem;
 }
@@ -223,22 +223,21 @@ svg:not(:root) {
 }
 
 a {
-  background: transparent;
   color: #be4bdb;
+  cursor: pointer;
   text-decoration: none;
-}
-
-a:visited {
-  color: #be4bdb;
+  -webkit-transition: none 86ms ease-out;
+  transition: none 86ms ease-out;
 }
 
 a:active {
   outline: 0;
+  color: #868e96;
 }
 
 a:hover {
   outline: 0;
-  color: #363636;
+  color: #868e96;
 }
 
 a:focus {
@@ -299,7 +298,7 @@ hr {
 
 kbd {
   background-color: whitesmoke;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #ced4da;
   padding: 0.25rem;
   border-radius: 3px;
 }
@@ -392,7 +391,7 @@ pre {
 
 .content blockquote {
   background-color: whitesmoke;
-  border-left: 5px solid #b5b5b5;
+  border-left: 5px solid #ced4da;
   padding: 1.5rem;
   font-style: italic;
   text-indent: -0.41rem;
@@ -441,7 +440,7 @@ pre {
 }
 
 .section.has-border-top {
-  border-top: 1px solid #b5b5b5;
+  border-top: 1px solid #ced4da;
 }
 
 .container {
@@ -485,7 +484,7 @@ pre {
   -webkit-box-align: center;
   align-items: center;
   background-color: white;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #ced4da;
   border-radius: 3px;
   display: -webkit-inline-box;
   display: inline-flex;
@@ -510,12 +509,10 @@ pre {
   padding-right: 10px;
   text-align: center;
   white-space: nowrap;
-  background-color: #f8f9fa;
 }
 
 .button:hover {
-  background-color: #b5b5b5;
-  border-color: #7a7a7a;
+  border-color: #adb5bd;
 }
 
 .button:active, .button:focus {
@@ -525,7 +522,7 @@ pre {
 
 .button[disabled] {
   background-color: whitesmoke;
-  border-color: #b5b5b5;
+  border-color: #ced4da;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -632,7 +629,7 @@ body:before {
 h1.demo {
   font-weight: 100;
   font-size: 12px;
-  color: #7a7a7a;
+  color: #adb5bd;
   text-transform: uppercase;
   font-family: "Inconsolata", "Consolas", "Monaco", monospace;
 }

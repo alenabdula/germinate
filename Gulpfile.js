@@ -10,7 +10,6 @@ elixir( (mix) => {
      * https://www.browsersync.io
      */
     mix.browserSync({
-        files: ['./public/**/*'],
         proxy: 'germinate.dev',
     });
     /**

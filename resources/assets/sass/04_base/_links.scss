@@ -1,16 +1,14 @@
 //
 // Links
 a {
-    background: transparent;
     color: $link;
+    cursor: pointer;
     text-decoration: none;
-
-    &:visited {
-        color: $link-visited;
-    }
+    transition: none 86ms ease-out;
 
     &:active {
         outline: 0;
+        color: $link-active;
     }
 
     &:hover {
