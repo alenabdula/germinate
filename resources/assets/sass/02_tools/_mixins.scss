@@ -1,60 +1,58 @@
 //
-// Mixins
-@mixin font_size_small { font-size: px2em($font_size_small); }
-@mixin font_size_regular { font-size: px2em($font_size_regular); }
-@mixin font_size_large { font-size: px2em($font_size_large); }
-@mixin font_size_x_large { font-size: px2em($font_size_x_large); }
-@mixin font_size_xx_large { font-size: px2em($font_size_xx_large); }
-@mixin font_size_xxx_large { font-size: px2em($font_size_xxx_large); }
-
+// Hidden.
 @mixin hidden {
-  display: none;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
 }
 
-@mixin unhidden {
-  display: block;
-  visibility: visible;
+//
+// Hide text.
+@mixin hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    font: "0/0" a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
 }
 
-@mixin hide_text {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  font: "0/0" a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
+//
+// Truncate text.
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-@mixin text_truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
+//
+// Invisible.
 @mixin invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
 
-@mixin visually_hidden {
-  overflow: hidden;
-  position: absolute;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  &.focusable {
-    &:active, &:focus {
-      position: static;
-      clip: auto;
-      height: auto;
-      width: auto;
-      margin: 0;
-      overflow: visible;
+//
+// Visually hidden.
+@mixin visually-hidden {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    &.is-focusable {
+        &:active,
+        &:focus {
+            position: static;
+            clip: auto;
+            height: auto;
+            width: auto;
+            margin: 0;
+            overflow: visible;
+        }
     }
-  }
 }

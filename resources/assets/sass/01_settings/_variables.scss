@@ -1,15 +1,15 @@
 //
-// Debug mode.
+// Debug.
 $debug: true;
 
 //
-// Colors
+// Colors.
 $black       : #0a0a0a;
 $grey-darker : #363636;
 $grey-dark   : #4a4a4a;
 $grey        : #7a7a7a;
 $grey-light  : #b5b5b5;
-$grey-lighter: #dbdbdb;
+$grey-lighter: #f8f9fa;
 $white       : #fff;
 $red         : #fa5252;
 $pink        : #e64980;
@@ -25,7 +25,7 @@ $yellow      : #fab005;
 $orange      : #fd7e14;
 
 //
-// Primary Colors
+// Primary Colors.
 $primary: $purple;
 $info   : $blue;
 $success: $green;
@@ -33,19 +33,19 @@ $warning: $yellow;
 $danger : $red;
 
 //
-// General Colors
+// General Colors.
 $body-background: $white;
 $border         : $grey-light;
 $border-hover   : $grey;
 
 //
-// Text Colors
+// Text Colors.
 $text       : $black;
 $text-light : $grey;
 $text-strong: $grey-darker;
 
 //
-// Link Colors
+// Link Colors.
 $link                 : $primary;
 $link-visited         : $primary;
 $link-hover           : $grey-darker;
@@ -55,12 +55,12 @@ $link-active          : $grey-darker;
 $link-active-border   : $grey-darker;
 
 //
-// Typography
+// Typography.
 $family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
 
 //
-// Font Sizing
+// Font Sizing.
 $size-1       : 48px;
 $size-2       : 40px;
 $size-3       : 28px;
@@ -72,7 +72,7 @@ $weight-normal: 400;
 $weight-bold  : 700;
 
 //
-// Typography Usage
+// Typography Usage.
 $family-primary: $family-sans-serif;
 $family-code   : $family-monospace;
 $size-small    : $size-7;
@@ -81,17 +81,18 @@ $size-medium   : $size-5;
 $size-large    : $size-4;
 $size-huge     : $size-3;
 
-// Misc.
+// Miscellaneous.
 $radius: 3px;
-$speed: 86ms;
+$speed : 86ms;
 
 //
 // Block quotes.
 $open-blockquote : '"';
 $close-blockquote: '"';
+
 //
-// Major responsive, mobile-first breakpoints.
-$responsive_breakpoints: (
+// Breakpoints.
+$breakpoints: (
     baby    : 34em,
     toddler : 48em,
     teenager: 62em,

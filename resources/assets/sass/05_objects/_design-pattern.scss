@@ -2,12 +2,11 @@
 //  Define your own design pattern
 
 .section {
-    border-bottom: 1px solid $border;
-    &:not(:first-child) {
-        border-bottom: none;
-    }
     &.has-padding {
         padding: 2rem 1rem;
+    }
+    &.has-border-top {
+        border-top: 1px solid $border;
     }
 }
 
@@ -17,9 +16,9 @@
 }
 
 .columns {
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-top: -1rem;
 
     @include mq('toddler') {
         display: flex;
@@ -32,7 +31,7 @@
 
 .column {
     display: block;
-    padding: 10px;
+    padding: 1rem;
 
     @include mq('toddler') {
         flex-basis: 0;

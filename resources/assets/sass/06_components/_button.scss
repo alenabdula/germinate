@@ -1,6 +1,5 @@
 //
-// Button Component
-
+// Button.
 .button {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -25,13 +24,15 @@
     padding-right: 10px;
     text-align: center;
     white-space: nowrap;
+    background-color: $grey-lighter;
 
     &:hover {
-        border-color: darken($grey-dark, 10%);
+        background-color: $grey-light;
+        border-color: $border-hover;
     }
 
     &:active, &:focus {
-        border-color: $primary;
+        border-color: $blue;
         outline: none;
     }
 

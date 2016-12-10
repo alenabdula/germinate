@@ -1,23 +1,10 @@
 //
-// Get responsive breakpoint from list of major layout breakpoints
-// $name: [baby, toddler, teenager, adult]
-@function get_responsive_breakpoint_width($name, $breakpoints: $responsive_breakpoints) {
+// Returns breakpoint width from $breakpoints
+@function get-breakpoint($name, $breakpoints: $breakpoints) {
     @if map-has-key($breakpoints, $name) {
         @return map-get($breakpoints, $name);
     }
     @else {
         @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
     }
-}
-
-//
-// Convert px to em
-@function px2em($px, $base-font-size: $font_size_regular) {
-    @if unitless($px) {
-        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-        @return mq-px2em($px * 1px, $base-font-size);
-    } @else if unit($px) == em {
-        @return $px;
-    }
-    @return ($px / $base-font-size) * 1em;
 }

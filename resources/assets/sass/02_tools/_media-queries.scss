@@ -1,8 +1,8 @@
 //
 // Simple Mobile-First Media Queries
 @mixin mq($name) {
-    $width: get_responsive_breakpoint_width($name);
-    @media (min-width: #{$width}) {
+    $width: get-breakpoint($name);
+    @media screen and (min-width: #{$width}) {
         @content;
     }
 }

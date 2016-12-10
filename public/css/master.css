@@ -436,16 +436,12 @@ pre {
   margin-bottom: 1rem;
 }
 
-.section {
-  border-bottom: 1px solid #b5b5b5;
-}
-
-.section:not(:first-child) {
-  border-bottom: none;
-}
-
 .section.has-padding {
   padding: 2rem 1rem;
+}
+
+.section.has-border-top {
+  border-top: 1px solid #b5b5b5;
 }
 
 .container {
@@ -454,12 +450,12 @@ pre {
 }
 
 .columns {
-  margin-left: -10px;
-  margin-right: -10px;
-  margin-top: -10px;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-top: -1rem;
 }
 
-@media (min-width: 48em) {
+@media screen and (min-width: 48em) {
   .columns {
     display: -webkit-box;
     display: flex;
@@ -471,10 +467,10 @@ pre {
 
 .column {
   display: block;
-  padding: 10px;
+  padding: 1rem;
 }
 
-@media (min-width: 48em) {
+@media screen and (min-width: 48em) {
   .column {
     flex-basis: 0;
     -webkit-box-flex: 1;
@@ -514,14 +510,16 @@ pre {
   padding-right: 10px;
   text-align: center;
   white-space: nowrap;
+  background-color: #f8f9fa;
 }
 
 .button:hover {
-  border-color: #313131;
+  background-color: #b5b5b5;
+  border-color: #7a7a7a;
 }
 
 .button:active, .button:focus {
-  border-color: #be4bdb;
+  border-color: #228ae6;
   outline: none;
 }
 
@@ -548,14 +546,50 @@ pre {
   color: rgba(54, 54, 54, 0.3);
 }
 
-.is--hidden {
+.is-hidden {
   display: none;
   visibility: hidden;
 }
 
-.is--visiable {
-  display: block;
-  visibility: visible;
+.has-text-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font: "0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.has-text-truncated {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.is-invisible {
+  visibility: hidden;
+}
+
+.is-visually-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.is-visually-hidden.is-focusable:active, .is-visually-hidden.is-focusable:focus {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  overflow: visible;
 }
 
 body:before {
@@ -567,28 +601,28 @@ body:before {
   color: #fff;
 }
 
-@media (min-width: 34em) {
+@media screen and (min-width: 34em) {
   body:before {
     content: 'baby: 34em';
     background-color: #228ae6;
   }
 }
 
-@media (min-width: 48em) {
+@media screen and (min-width: 48em) {
   body:before {
     content: 'toddler: 48em';
     background-color: #be4bdb;
   }
 }
 
-@media (min-width: 62em) {
+@media screen and (min-width: 62em) {
   body:before {
     content: 'teenager: 62em';
     background-color: #82c91e;
   }
 }
 
-@media (min-width: 75em) {
+@media screen and (min-width: 75em) {
   body:before {
     content: 'adult: 75em';
     background-color: #fa5252;
