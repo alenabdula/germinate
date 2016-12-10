@@ -1,66 +1,94 @@
 //
 // Debug mode.
 $debug: true;
+
 //
-// Primary colors.
-$leaf : #A4CE39;
-$ocean: #0194BC;
-// Secondary colors.
-$honey   : #E8A03F;
-$lavender: rebeccapurple;
+// Colors
+$black       : #0a0a0a;
+$grey-darker : #363636;
+$grey-dark   : #4a4a4a;
+$grey        : #7a7a7a;
+$grey-light  : #b5b5b5;
+$grey-lighter: #dbdbdb;
+$white       : #fff;
+$red         : #fa5252;
+$pink        : #e64980;
+$purple      : #be4bdb;
+$violet      : #7950f2;
+$indigo      : #4c6ef5;
+$blue        : #228ae6;
+$cyan        : #15aabf;
+$teal        : #12b886;
+$green       : #40c057;
+$lime        : #82c91e;
+$yellow      : #fab005;
+$orange      : #fd7e14;
+
 //
-// Neutral colors.
-$white      : #FFFFEE;
-$black      : #222;
-$gray_light : #e0e5ee;
-$gray_medium: #d1d5dc;
-$gray_dark  : #babdc3;
+// Primary Colors
+$primary: $purple;
+$info   : $blue;
+$success: $green;
+$warning: $yellow;
+$danger : $red;
+
 //
-// Usage.
-$color_primary          : $leaf;
-$color_accent           : $honey;
-$color_shadow           : $ocean;
-$color_background       : $white;
-$color_background_invert: $black;
-$color_text             : $black;
-$color_text_invert      : $white;
-$color_text_weak        : lighten($black, 10%);
-$color_text_selection   : rgba($leaf, 0.5);
-$color_text_link        : $leaf;
-$color_text_link_visited: $leaf;
-$color_text_link_hover  : darken($leaf, 10%);
-$color_border           : $gray_light;
+// General Colors
+$body-background: $white;
+$border         : $grey-light;
+$border-hover   : $grey;
+
 //
-// Font family.
-$font_family_text   : Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
-$font_family_display: sans-serif;
-$font_family_code   : monospace;
+// Text Colors
+$text       : $black;
+$text-light : $grey;
+$text-strong: $grey-darker;
+
 //
-// Font sizes.
-$font_size_small    : 12px;
-$font_size_regular  : 16px; // browser default font-size at 100%
-$font_size_large    : 24px;
-$font_size_x_large  : 32px;
-$font_size_xx_large : 48px;
-$font_size_xxx_large: 64px;
+// Link Colors
+$link                 : $primary;
+$link-visited         : $primary;
+$link-hover           : $grey-darker;
+$link-hover-background: $grey-lighter;
+$link-hover-border    : $grey-darker;
+$link-active          : $grey-darker;
+$link-active-border   : $grey-darker;
+
 //
-// Font weights.
-$font_weight_light  : 100;
-$font_weight_regular: 400;
-$font_weight_bold   : 700;
+// Typography
+$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
+
 //
-// Line height.
-$line_height: 1.6;
+// Font Sizing
+$size-1       : 48px;
+$size-2       : 40px;
+$size-3       : 28px;
+$size-4       : 24px;
+$size-5       : 18px;
+$size-6       : 14px;
+$size-7       : 11px;
+$weight-normal: 400;
+$weight-bold  : 700;
+
 //
-// Spacing
-$spacing_small    : 0.3rem;
-$spacing_regular  : 1rem;
-$spacing_large    : 1.25rem;
-$spacing_x_large  : 1.46rem;
+// Typography Usage
+$family-primary: $family-sans-serif;
+$family-code   : $family-monospace;
+$size-small    : $size-7;
+$size-normal   : $size-6;
+$size-medium   : $size-5;
+$size-large    : $size-4;
+$size-huge     : $size-3;
+
+// Misc.
+$radius: 3px;
+$speed: 86ms;
+
 //
 // Block quotes.
-$open_blockquote : '"';
-$close_blockquote: '"';
+$open-blockquote : '"';
+$close-blockquote: '"';
 //
 // Major responsive, mobile-first breakpoints.
 $responsive_breakpoints: (

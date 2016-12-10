@@ -1,16 +1,21 @@
 //
 // Site Defaults
+
 html {
-  background: $color_background;
-  min-height: 100%;
-  overflow-y: scroll;
+    background: $body-background;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
 }
 
 body {
-  margin: 0;
-  font-family: $font_family_text;
-  font-size: 100%;
-  line-height: $line_height;
-  background-color: transparent;
-  color: $color_text;
+    margin: 0;
+    font-family: $family-primary;
+    font-size: 100%;
+    line-height: 1.428571428571429;
+    background-color: transparent;
+    color: $text;
 }

@@ -1,8 +1,42 @@
 //
 //  Define your own design pattern
-.example {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+
+.section {
+    border-bottom: 1px solid $border;
+    &:not(:first-child) {
+        border-bottom: none;
+    }
+    &.has-padding {
+        padding: 2rem 1rem;
+    }
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.columns {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+
+    @include mq('toddler') {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.column {
+    display: block;
+    padding: 10px;
+
+    @include mq('toddler') {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
 }

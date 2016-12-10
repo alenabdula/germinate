@@ -1,16 +1,17 @@
 //
 // Images
+
 img {
-  max-width: 100%;
-  height: auto;
-  border: 0;
+    max-width: 100%;
+    height: auto;
+    border: 0;
 }
 
 img[width],
 img[height] {
-  max-width: none;
+    max-width: none;
 }
 
 svg:not(:root) {
-  overflow: hidden;
+    overflow: hidden;
 }

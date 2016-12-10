@@ -1,26 +1,60 @@
 //
 // Button Component
+
 .button {
-  border: none;
-  padding: 1rem 2.3rem;
-  color: black;
-  background-color: gray;
-  &:hover {
-    color: white;
-  }
-  &:active {
-    background-color: orange;
-  }
-  @include mq(baby) {
-    background-color: green;
-  }
-  @include mq(toddler) {
-    background-color: blue;
-  }
-  @include mq(teenager) {
-    background-color: purple;
-  }
-  @include mq(adult) {
-    background-color: yellow;
-  }
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    background-color: white;
+    border: 1px solid $border;
+    border-radius: 3px;
+    display: inline-flex;
+    font-size: 14px;
+    height: 32px;
+    justify-content: flex-start;
+    line-height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    vertical-align: top;
+    -webkit-touch-callout: none;
+    user-select: none;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    white-space: nowrap;
+
+    &:hover {
+        border-color: darken($grey-dark, 10%);
+    }
+
+    &:active, &:focus {
+        border-color: $primary;
+        outline: none;
+    }
+
+    &[disabled] {
+        background-color: whitesmoke;
+        border-color: $border;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    &[disabled]::-moz-placeholder {
+        color: rgba(54, 54, 54, 0.3);
+    }
+
+    &[disabled]::-webkit-input-placeholder {
+        color: rgba(54, 54, 54, 0.3);
+    }
+
+    &[disabled]:-moz-placeholder {
+        color: rgba(54, 54, 54, 0.3);
+    }
+
+    &[disabled]:-ms-input-placeholder {
+        color: rgba(54, 54, 54, 0.3);
+    }
 }

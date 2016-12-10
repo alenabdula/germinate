@@ -5,57 +5,128 @@
     <title>Germinate</title>
     <meta name="description" content="Germinate this!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- icons -->
     <link rel="apple-touch-startup-image" href="img/apple-touch-startup-image-640x920.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
     <link rel="icon" sizes="192x192" href="img/icon-192x192.png">
-    <meta name="theme-color" content="#A4CE39">
-    <meta name="msapplication-navbutton-color" content="#A4CE39">
+    <!-- styling -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#be4bdb">
+    <meta name="msapplication-navbutton-color" content="#be4bdb">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
-    <div class="example">
-      <button id="js-button" class="button">A Button!</button>
-    </div>
-    <script type="text/javascript">
-        /**
-         * Check if JavaScript is available and
-        *  adds 'js has-js' CSS classes to document element
-         */
-        document.documentElement.className = document.documentElement.className.replace('no-js', " ");
-        document.documentElement.className += ' js has-js ';
-        /**
-         * loadJS - A simple function for asynchronously loading JavaScript files
-         * @scottjehl, Filament Group, Inc.
-         * https://github.com/filamentgroup/loadJS
-         */
-         (function(w){
-            var loadJS = function(src, cb){
-                "use strict";
-                var ref = w.document.getElementsByTagName("script")[ 0 ];
-                var script = w.document.createElement("script");
-                script.src = src;
-                script.async = true;
-                ref.parentNode.insertBefore(script, ref);
-                if (cb && typeof(cb) === "function"){
-                    script.onload = cb;
-                }
-                return script;
-            };
-            // commonjs
-            if( typeof module !== "undefined" ){
-                module.exports = loadJS;
-            }
-            else {
-                w.loadJS = loadJS;
-            }
-        }(typeof global !== "undefined" ? global : this));
-        /**
-         * Application
-         */
-        loadJS("js/master.js");
-    </script>
+<!-- application -->
+<div id="app">
+    <section class="section has-padding">
+        <div class="container">
+            <div class="content">
+                <div class="columns">
+                    <div class="column">
+                        <h1 class="demo">Headings</h1>
+                        <h1>Heading 1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? <mark>Minima consequatur illo animi ratione cupiditate blanditiis</mark>, ex eos, autem iusto non cum eum vitae quisquam.</p>
+                        <p>Omnis dolor nam laboriosam! Accusantium rerum magnam repudiandae libero maxime eum molestiae deserunt consequatur ipsa obcaecati exercitationem id quidem assumenda, veniam, fugit debitis inventore quaerat, natus quisquam velit qui iure!</p>
+                        <h2>Heading 2</h2>
+                        <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>. In natus assumenda soluta enim unde? <strong>Minima consequatur illo animi</strong> ratione cupiditate blanditiis, ex eos, <em>autem iusto non cum eum vitae</em> quisquam.</p>
+                        <h3>Heading 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
+                        <p>Omnis dolor nam laboriosam! Accusantium rerum magnam repudiandae libero maxime eum molestiae deserunt consequatur ipsa obcaecati exercitationem id quidem assumenda, veniam, fugit debitis inventore quaerat, natus quisquam velit qui iure!</p>
+                        <h4>Heading 4</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
+                        <h5>Heading 5</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
+                        <h6>Heading 6</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
+                        <p><img src="//placehold.it/1200x300" alt=""></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus tempora provident error nobis vero voluptatibus ipsa quam facere nemo. Optio odio quisquam, illum distinctio et numquam sunt dolore quo velit.</p>
+                    </div>
+                    <div class="column">
+                        <h1 class="demo">Blockquote</h1>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates saepe eveniet, voluptate dolor autem cumque voluptas nisi esse earum explicabo neque aut, perferendis eaque obcaecati sint aspernatur aliquid. Officia, voluptatum!</p>
+                        </blockquote>
+                        <h1 class="demo">Keyboard &amp; Code</h1>
+                        <p>Press: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd></p>
+                        <code>
+                            <pre>
+            function name(argument) {
+                return argument.val();
+            }</pre>
+                            </code>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reiciendis nobis expedita autem quia eaque, nam, ratione! Nulla quae iste eveniet, architecto provident velit, aspernatur at temporibus voluptatum, cumque ducimus!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, autem veritatis. Nam velit, aliquid excepturi iusto ipsam in vitae delectus libero nulla non ipsa accusantium pariatur veritatis possimus eos.</p>
+                        <h1 class="demo">Subscript, Superscript, &amp; Abbreviation</h1>
+                        <p>It's 200<sup>&deg;</sup> Celsius</p>
+                        <p>100<sub>&frac25;</sub></p>
+                        <p><abbr title="Revere High School">RHS</abbr></p>
+                        <h1 class="demo">Buttons</h1>
+                        <a href="#" class="button">Link Button</a>
+                        <button class="button">Default</button>
+                        <h1 class="demo">Lists</h1>
+                        <ul>
+                            <li>Parent</li>
+                            <ul>
+                                <li>Child</li>
+                                <li>Child</li>
+                                <ul>
+                                    <li>Grandchild</li>
+                                    <li>Grandchild</li>
+                                </ul>
+                            </ul>
+                            <li>Parent</li>
+                            <li>Parent</li>
+                        </ul>
+                        <ol>
+                            <li>Parent</li>
+                            <ol>
+                                <li>Child</li>
+                                <li>Child</li>
+                                <ol>
+                                    <li>Grandchild</li>
+                                    <li>Grandchild</li>
+                                </ol>
+                            </ol>
+                            <li>Parent</li>
+                            <li>Parent</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section has-padding">
+        <div class="container">
+            <div class="content">
+                <h1 class="demo">Grid</h1>
+                <div class="columns">
+                    <div class="column">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quibusdam ad quis at officia, blanditiis rerum nam consequatur perspiciatis eaque, debitis eius, id sequi. Dolores reprehenderit nesciunt id consequatur eum!</p>
+                        <p><button id="js-button" class="button">Click Me</button></p>
+                    </div>
+                    <div class="column">
+                        <h2>Iste earum hic voluptatibus incidunt illo totam ad ipsam explicabo fugit, at autem, pariatur. Suscipit, ipsam.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores delectus doloribus sint facere debitis beatae dolorem ex ad dignissimos, vero reprehenderit repellat maxime. Sapiente quos nulla ipsum tempore, quibusdam nihil.</p>
+                        <p>Ducimus perferendis ratione, fugit suscipit sapiente ad, voluptates saepe nostrum accusantium deserunt eum esse exercitationem ipsa alias, optio voluptatibus asperiores quod excepturi quos rem perspiciatis laborum accusamus. Aut, dignissimos, voluptas!</p>
+                        <p>Perferendis fugiat officiis, libero possimus non quo autem ad voluptates assumenda asperiores enim quisquam id quam deserunt alias officia, nisi est aspernatur sint eum suscipit ratione iste earum? Numquam, natus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- JavaScript -->
+<script type="text/javascript">
+    /**
+     * Adds `js has-js` to to html element is JavaScript is available.
+     */
+     document.documentElement.className = document.documentElement.className.replace('no-js', " ");
+     document.documentElement.className += ' js has-js ';
+</script>
+<script src="js/master.js"></script>
 </body>
 </html>

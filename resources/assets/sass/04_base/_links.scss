@@ -1,20 +1,24 @@
 //
 // Links
 a {
-  background: transparent;
-  color: $color_text_link;
-  text-decoration: none;
-  &:visited {
-    color: $color_text_link_visited;
-  }
-  &:active {
-    outline: 0;
-  }
-  &:hover {
-    outline: 0;
-    color: $color_text_link_hover;
-  }
-  &:focus {
-    outline-color: $color_text_link;
-  }
+    background: transparent;
+    color: $link;
+    text-decoration: none;
+
+    &:visited {
+        color: $link-visited;
+    }
+
+    &:active {
+        outline: 0;
+    }
+
+    &:hover {
+        outline: 0;
+        color: $link-hover;
+    }
+
+    &:focus {
+        outline-color: $link;
+    }
 }

@@ -2,22 +2,28 @@
 // Testing
 
 @if $debug {
-body:before {
-    display: block;
-    content: 'mobile-first';
-    font-family: monospace;
-    text-align: center;
-    @include mq(baby) {
-        content: 'baby';
+    body:before {
+        display: block;
+        content: 'mobile-first: 0-33em';
+        font-family: monospace;
+        text-align: center;
+        background-color: $green;
+        color: $white;
+        @include mq(baby) {
+            content: 'baby: 34em';
+            background-color: $blue;
+        }
+        @include mq(toddler) {
+            content: 'toddler: 48em';
+            background-color: $purple;
+        }
+        @include mq(teenager) {
+            content: 'teenager: 62em';
+            background-color: $lime;
+        }
+        @include mq(adult) {
+            content: 'adult: 75em';
+            background-color: $red;
+        }
     }
-    @include mq(toddler) {
-        content: 'toddler';
-    }
-    @include mq(teenager) {
-        content: 'teenager';
-    }
-    @include mq(adult) {
-        content: 'adult';
-    }
-}
 }
