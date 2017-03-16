@@ -16,7 +16,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- JavaScript -->
+    <script type="text/javascript">
+        /**
+         * Adds `js has-js` to to html element is JavaScript is available.
+         */
+         document.documentElement.className = document.documentElement.className.replace('no-js', '');
+         document.documentElement.className += 'js has-js';
+    </script>
 </head>
 <body>
 <!-- application -->
@@ -122,14 +130,6 @@ function name(argument) {
         </div>
     </section>
 </div>
-<!-- JavaScript -->
-<script type="text/javascript">
-    /**
-     * Adds `js has-js` to to html element is JavaScript is available.
-     */
-     document.documentElement.className = document.documentElement.className.replace('no-js', " ");
-     document.documentElement.className += ' js has-js ';
-</script>
-<script src="js/master.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

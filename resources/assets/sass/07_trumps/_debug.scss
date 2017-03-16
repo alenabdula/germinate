@@ -4,25 +4,31 @@
 @if $debug {
     body:before {
         display: block;
-        content: 'mobile-first: 0-33em';
-        font-family: monospace;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        content: 'mobile-first: 0-543px';
+        font-family: $family-monospace;
+        font-size: 65%;
+        letter-spacing: 1px;
         text-align: center;
         background-color: $green;
         color: $white;
-        @include mq(baby) {
-            content: 'baby: 34em';
+        @include mq('min-width','baby') {
+            content: 'baby: 544px - 767px';
             background-color: $blue;
         }
-        @include mq(toddler) {
-            content: 'toddler: 48em';
+        @include mq('min-width','toddler') {
+            content: 'toddler: 768px - 991px';
             background-color: $purple;
         }
-        @include mq(teenager) {
-            content: 'teenager: 62em';
+        @include mq('min-width','teenager') {
+            content: 'teenager: 992px - 1199px';
             background-color: $lime;
         }
-        @include mq(adult) {
-            content: 'adult: 75em';
+        @include mq('min-width','adult') {
+            content: 'adult: 1200px';
             background-color: $red;
         }
     }

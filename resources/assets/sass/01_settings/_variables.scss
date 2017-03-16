@@ -78,6 +78,7 @@ $size-4       : 24px;
 $size-5       : 18px;
 $size-6       : 14px;
 $size-7       : 11px;
+$weight-light : 100;
 $weight-normal: 400;
 $weight-bold  : 700;
 
@@ -103,8 +104,8 @@ $close-blockquote: '"';
 //
 // Breakpoints.
 $breakpoints: (
-    baby    : 34em,
-    toddler : 48em,
-    teenager: 62em,
-    adult   : 75em,
+    baby    : 544px,
+    toddler : 768px,
+    teenager: 992px,
+    adult   : 1200px,
 );

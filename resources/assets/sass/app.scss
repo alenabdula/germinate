@@ -38,8 +38,8 @@
 @import '07_trumps/debug';
 
 h1.demo {
-    font-weight: 100;
-    font-size: 12px;
+    font-weight: $weight-light;
+    font-size: $size-normal;
     color: $grey-dark;
     text-transform: uppercase;
     font-family: $family-monospace;

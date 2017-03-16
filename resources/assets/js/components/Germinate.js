@@ -41,10 +41,12 @@ const Germinate = {
      * Logs information to browsers console.
      */
     print(text, withSize = false) {
+        let style = "color: #A4CE39; font-size: 1.2rem;";
         if ( withSize ) {
-            console.info(`Width: ${this.width} and Height: ${this.height}`);
+            console.log(`%cWidth: ${this.width}px`, style);
+            console.log(`%cHeight: ${this.height}px`, style);
         }
-        console.log(`%c${text}`, "color: #A4CE39; font-size: 2rem;");
+        console.log(`%c${text}`, style);
     },
 
     /**

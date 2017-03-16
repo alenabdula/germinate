@@ -1,8 +1,11 @@
 //
-// Simple Mobile-First Media Queries
-@mixin mq($name) {
-    $width: get-breakpoint($name);
-    @media screen and (min-width: #{$width}) {
+// Media Queries.
+// Media Features: width | min-width | max-width | height | min-height | max-height | orientation
+@mixin mq($media-feature, $name) {
+    $breakpoint: get-breakpoint($name);
+    $unit: strip-unit($breakpoint);
+    $value: rem($unit);
+    @media screen and (#{$media-feature}: #{$value}) {
         @content;
     }
 }

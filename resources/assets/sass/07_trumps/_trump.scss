@@ -24,6 +24,6 @@
 
 //
 // Visually hidden element helper.
-.is-visually-hidden {
+.is-visually-hidden, .sr-only {
     @include visually-hidden();
 }
