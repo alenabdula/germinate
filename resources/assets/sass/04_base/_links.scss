@@ -4,7 +4,7 @@ a {
     color: $link;
     cursor: pointer;
     text-decoration: none;
-    transition: none 86ms ease-out;
+    transition: $transition;
 
     &:active {
         outline: 0;

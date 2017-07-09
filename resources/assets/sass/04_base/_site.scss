@@ -2,7 +2,7 @@
 // Site Defaults
 
 html {
-    background: $body-background;
+    background: $background;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     min-width: 300px;
@@ -13,9 +13,10 @@ html {
 
 body {
     margin: 0;
-    font-family: $family-primary;
+    font-family: $family-sans-serif;
+    font-weight: $weight-normal;
     font-size: 100%;
-    line-height: 1.428571428571429;
+    line-height: 1.5;
     background-color: transparent;
     color: $text;
 }

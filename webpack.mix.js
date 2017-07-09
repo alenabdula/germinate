@@ -9,7 +9,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
             index: "index.html"
         },
         files: [
-            './public/**/*.html'
+            './public/**/*.*'
         ]
     })
 ;

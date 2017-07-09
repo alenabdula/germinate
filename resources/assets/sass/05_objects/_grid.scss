@@ -1,0 +1,69 @@
+.columns {
+    margin-left: -#{$space-normal};
+    margin-right: -#{$space-normal};
+    margin-top: -#{$space-normal};
+    @include mq('min-width', 'toddler') {
+        display: flex;
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.column {
+    display: block;
+    padding: $space-normal;
+    @include mq('min-width', 'toddler') {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        &.is-1 {
+            width: 8.33333%;
+            flex: none;
+        }
+        &.is-2 {
+            width: 16.66667%;
+            flex: none;
+        }
+        &.is-3 {
+            width: 25%;
+            flex: none;
+        }
+        &.is-4 {
+            width: 33.33333%;
+            flex: none;
+        }
+        &.is-5 {
+            width: 41.66667%;
+            flex: none;
+        }
+        &.is-6 {
+            width: 50%;
+            flex: none;
+        }
+        &.is-7 {
+            width: 58.33333%;
+            flex: none;
+        }
+        &.is-8 {
+            width: 66.66667%;
+            flex: none;
+        }
+        &.is-9 {
+            width: 75%;
+            flex: none;
+        }
+        &.is-10 {
+            width: 83.33333%;
+            flex: none;
+        }
+        &.is-11 {
+            width: 91.66667%;
+            flex: none;
+        }
+        &.is-12 {
+            width: 100%;
+            flex: none;
+        }
+    }
+}

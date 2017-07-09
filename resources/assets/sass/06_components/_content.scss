@@ -3,38 +3,39 @@
 
 .content {
     h1, h2, h3, h4, h5, h6 {
-        font-weight: 300;
+        font-weight: $weight-light;
         line-height: 1.125;
-        margin-bottom: 2rem;
+        margin-bottom: $space-normal;
         &:not(:first-child) {
-            margin-top: 3rem;
+            margin-top: $space-large;
         }
     }
 
     h1 {
-        font-size: $size-huge;
+        font-size: $size-1;
         font-weight: $weight-bold;
     }
 
     h2 {
-        font-size: $size-large;
+        font-size: $size-2;
     }
 
     h3 {
-        font-size: $size-medium;
+        font-size: $size-3;
     }
 
     h4 {
-        font-size: $size-normal;
+        font-size: $size-4;
     }
 
-    h5, h6 {
-        font-size: $size-small;
+    h5 {
+        font-size: $size-5;
     }
 
     h6 {
         text-transform: uppercase;
         letter-spacing: 1px;
+        font-size: $size-7;
     }
 
     ul, ol {
@@ -107,6 +108,15 @@
         q:after {
             content: "\2019";
             content: close-quote;
+        }
+        .source {
+            display: block;
+            margin-top: $space-small;
+            text-indent: 0;
+
+            &:before{
+                content:"\2014";
+            }
         }
     }
 

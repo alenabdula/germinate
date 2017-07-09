@@ -1,10 +1,16 @@
 //
 // Media Queries.
-// Media Features: width | min-width | max-width | height | min-height | max-height | orientation
-@mixin mq($media-feature, $name) {
-    $breakpoint: get-breakpoint($name);
-    $unit: strip-unit($breakpoint);
-    $value: rem($unit);
+//  Features:
+//   - width,
+//   - min-width,
+//   - max-width,
+//   - height,
+//   - min-height,
+//   - max-height,
+//   - orientation,
+@mixin mq($media-feature, $breakpoint-name) {
+    $breakpoint: get-breakpoint($breakpoint-name);
+    $value: rem($breakpoint);
     @media screen and (#{$media-feature}: #{$value}) {
         @content;
     }

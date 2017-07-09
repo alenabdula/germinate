@@ -11,73 +11,119 @@
     <link rel="icon" sizes="192x192" href="img/icon-192x192.png">
     <!-- styling -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="theme-color" content="#be4bdb">
-    <meta name="msapplication-navbutton-color" content="#be4bdb">
+    <meta name="theme-color" content="#82c91e">
+    <meta name="msapplication-navbutton-color" content="#82c91e">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- CSS -->
     <link rel="stylesheet" href="css/app.css">
     <!-- JavaScript -->
     <script type="text/javascript">
-        /**
-         * Adds `js has-js` to to html element is JavaScript is available.
-         */
-         document.documentElement.className = document.documentElement.className.replace('no-js', '');
-         document.documentElement.className += 'js has-js';
+        /* Is JavaScript is available? */
+        document.documentElement.className = document.documentElement.className.replace('no-js', '');
+        document.documentElement.className += 'js-enhanced';
     </script>
 </head>
 <body>
-<!-- application -->
-<div id="app">
-    <header class="section has-padding">
-        <h1>Germinate</h1>
-    </header>
-    <section class="section has-padding has-border-top">
-        <div class="container">
-            <div class="content">
-                <div class="columns">
-                    <div class="column">
-                        <h1 class="demo">Headings</h1>
+    <!-- application -->
+    <div id="app">
+        <header id="header" class="section" role="banner">
+            <div class="container">
+                <h1>Germinate</h1>
+                <nav role="navigation">
+                    <a href="#toc" id="toc-button" class="button is-grey">View Table of Contents</a>
+                    <h1 id="toc">Table of Contents</h1>
+                    <div id="nav">
+                        <a class="nav-item" href="#headings">Headings</a>
+                        <a class="nav-item" href="#type">Type</a>
+                        <a class="nav-item" href="#blockquote">Blockquote</a>
+                        <a class="nav-item" href="#keyboardcode">Keyboard &amp; Code</a>
+                        <a class="nav-item" href="#subsupabbr">Subscript, Superscript, &amp; Abbreviation</a>
+                        <a class="nav-item" href="#lists">Lists</a>
+                        <a class="nav-item" href="#buttons">Buttons</a>
+                        <a class="nav-item" href="#grid">Grid</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="main" role="main">
+            <section class="section">
+                <h1 class="heading" id="headings">Headings</h1>
+                <div class="container">
+                    <div class="content">
                         <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="heading" id="type">Type</h1>
+                <div class="container">
+                    <div class="content">
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sint ratione eligendi numquam laborum.</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? <mark>Minima consequatur illo animi ratione cupiditate blanditiis</mark>, ex eos, autem iusto non cum eum vitae quisquam.</p>
                         <p>Omnis dolor nam laboriosam! Accusantium rerum magnam repudiandae libero maxime eum molestiae deserunt consequatur ipsa obcaecati exercitationem id quidem assumenda, veniam, fugit debitis inventore quaerat, natus quisquam velit qui iure!</p>
-                        <h2>Heading 2</h2>
                         <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>. In natus assumenda soluta enim unde? <strong>Minima consequatur illo animi</strong> ratione cupiditate blanditiis, ex eos, <em>autem iusto non cum eum vitae</em> quisquam.</p>
-                        <h3>Heading 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
-                        <p>Omnis dolor nam laboriosam! Accusantium rerum magnam repudiandae libero maxime eum molestiae deserunt consequatur ipsa obcaecati exercitationem id quidem assumenda, veniam, fugit debitis inventore quaerat, natus quisquam velit qui iure!</p>
-                        <h4>Heading 4</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
-                        <h5>Heading 5</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
-                        <h6>Heading 6</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus assumenda soluta enim unde? Minima consequatur illo animi ratione cupiditate blanditiis, ex eos, autem iusto non cum eum vitae quisquam.</p>
-                        <p><img src="//placehold.it/1200x300" alt=""></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus tempora provident error nobis vero voluptatibus ipsa quam facere nemo. Optio odio quisquam, illum distinctio et numquam sunt dolore quo velit.</p>
+                        <h2>Labore dolorem eveniet voluptates molestias blanditiis natus, atque illum laboriosam quod.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quisquam illum at animi nam, tenetur quia blanditiis iusto hic placeat reprehenderit temporibus, architecto repudiandae similique commodi voluptates! Quia nam, nemo.</p>
+                        <p>Quibusdam pariatur adipisci quidem debitis doloremque quas, aliquid commodi, nesciunt at magni ab saepe quod inventore voluptatem quaerat nobis illum numquam distinctio quae labore, veritatis temporibus nemo. Nobis repellendus, corporis.</p>
+                        <h3>Labore dolorem eveniet voluptates molestias blanditiis natus, atque illum laboriosam quod.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quisquam illum at animi nam, tenetur quia blanditiis iusto hic placeat reprehenderit temporibus, architecto repudiandae similique commodi voluptates! Quia nam, nemo.</p>
+                        <p>Quibusdam pariatur adipisci quidem debitis doloremque quas, aliquid commodi, nesciunt at magni ab saepe quod inventore voluptatem quaerat nobis illum numquam distinctio quae labore, veritatis temporibus nemo. Nobis repellendus, corporis.</p>
+                        <h4>Labore dolorem eveniet voluptates molestias blanditiis natus, atque illum laboriosam quod.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quisquam illum at animi nam, tenetur quia blanditiis iusto hic placeat reprehenderit temporibus, architecto repudiandae similique commodi voluptates! Quia nam, nemo.</p>
+                        <p>Quibusdam pariatur adipisci quidem debitis doloremque quas, aliquid commodi, nesciunt at magni ab saepe quod inventore voluptatem quaerat nobis illum numquam distinctio quae labore, veritatis temporibus nemo. Nobis repellendus, corporis.</p>
+                        <h5>Labore dolorem eveniet voluptates molestias blanditiis natus, atque illum laboriosam quod.</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quisquam illum at animi nam, tenetur quia blanditiis iusto hic placeat reprehenderit temporibus, architecto repudiandae similique commodi voluptates! Quia nam, nemo.</p>
+                        <p>Quibusdam pariatur adipisci quidem debitis doloremque quas, aliquid commodi, nesciunt at magni ab saepe quod inventore voluptatem quaerat nobis illum numquam distinctio quae labore, veritatis temporibus nemo. Nobis repellendus, corporis.</p>
+                        <h6>Labore dolorem eveniet voluptates molestias blanditiis natus, atque illum laboriosam quod.</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quisquam illum at animi nam, tenetur quia blanditiis iusto hic placeat reprehenderit temporibus, architecto repudiandae similique commodi voluptates! Quia nam, nemo.</p>
+                        <p>Quibusdam pariatur adipisci quidem debitis doloremque quas, aliquid commodi, nesciunt at magni ab saepe quod inventore voluptatem quaerat nobis illum numquam distinctio quae labore, veritatis temporibus nemo. Nobis repellendus, corporis.</p>
                     </div>
-                    <div class="column">
-                        <h1 class="demo">Blockquote</h1>
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="heading" id="blockquote">Blockquote</h1>
+                <div class="container">
+                    <div class="content">
                         <blockquote>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates saepe eveniet, voluptate dolor autem cumque voluptas nisi esse earum explicabo neque aut, perferendis eaque obcaecati sint aspernatur aliquid. Officia, voluptatum!</p>
+                            <p class="source">Alen Abdula</p>
                         </blockquote>
-                        <h1 class="demo">Keyboard &amp; Code</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="heading" id="keyboardcode">Keyboard &amp; Code</h1>
+                <div class="container">
+                    <div class="content">
                         <p>Press: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd></p>
-                        <code>
-                            <pre>
-function name(argument) {
-    return argument.val();
-}</pre>
+                        <code><pre>
+    function name(argument) {
+        return argument.val();
+    }</pre>
                         </code>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reiciendis nobis expedita autem quia eaque, nam, ratione! Nulla quae iste eveniet, architecto provident velit, aspernatur at temporibus voluptatum, cumque ducimus!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at, autem veritatis. Nam velit, aliquid excepturi iusto ipsam in vitae delectus libero nulla non ipsa accusantium pariatur veritatis possimus eos.</p>
-                        <h1 class="demo">Subscript, Superscript, &amp; Abbreviation</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="heading" id="subsupabbr">Subscript, Superscript, &amp; Abbreviation</h1>
+                <div class="container">
+                    <div class="content">
                         <p>It's 200<sup>&deg;</sup> Celsius</p>
                         <p>100<sub>&frac25;</sub></p>
                         <p><abbr title="Revere High School">RHS</abbr></p>
-                        <h1 class="demo">Buttons</h1>
-                        <a href="#" class="button">Link Button</a>
-                        <button class="button">Default</button>
-                        <h1 class="demo">Lists</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="heading" id="lists">Lists</h1>
+                <div class="container">
+                    <div class="content">
                         <ul>
                             <li>Parent</li>
                             <ul>
@@ -106,30 +152,127 @@ function name(argument) {
                         </ol>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="section has-padding has-border-top">
-        <div class="container">
-            <div class="content">
-                <h1 class="demo">Grid</h1>
+            </section>
+            <section class="section">
+                <h1 class="heading" id="buttons">Buttons</h1>
+                <div class="container">
+                    <div class="content">
+                        <button class="button">Button</button>
+                        <a href="#" class="button">Link Button</a>
+                        <a href="#" class="button is-primary">Primary</a>
+                        <a href="#" class="button is-info">Info</a>
+                        <a href="#" class="button is-success">Success</a>
+                        <a href="#" class="button is-warning">Warning</a>
+                        <a href="#" class="button is-danger">Danger</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h1 class="heading" id="grid">Grid</h1>
+                <div class="container">
+                    <div class="content">
+                        <h4>Default</h4>
+                        <div class="columns">
+                            <div class="column">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident minus omnis molestias fugit, porro commodi. Odio nostrum tempora ut id pariatur, porro, quam quasi vel modi cumque voluptatibus mollitia dolorem.</p>
+                            </div>
+                            <div class="column">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, ea. Officia odit sequi minus earum fugit eum autem rem placeat, voluptas amet nemo hic vel reiciendis consectetur, reprehenderit neque consequuntur!</p>
+                            </div>
+                        </div>
+                        <h4>12 Column Grid</h4>
+                        <div class="columns">
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">1</div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-1">1</div>
+                            <div class="column is-1">2</div>
+                            <div class="column is-1">3</div>
+                            <div class="column is-1">4</div>
+                            <div class="column is-1">5</div>
+                            <div class="column is-1">6</div>
+                            <div class="column is-1">7</div>
+                            <div class="column is-1">8</div>
+                            <div class="column is-1">9</div>
+                            <div class="column is-1">10</div>
+                            <div class="column is-1">11</div>
+                            <div class="column is-1">12</div>
+                        </div>
+                        <h4>Examples</h4>
+                        <div class="columns">
+                            <div class="column is-3">
+                                <h6>Column is-3</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quod, harum quas nisi ad beatae eum nobis optio vero quae corrupti libero facere deserunt aut. Inventore molestiae quam iusto voluptatum!</p>
+                                <p>Recusandae dignissimos ratione, culpa molestias, vel, corporis saepe beatae autem similique temporibus dolore asperiores! Explicabo, hic maxime facere itaque nobis inventore! Perspiciatis cum vero alias, veniam, sunt fugiat iure placeat.</p>
+                            </div>
+                            <div class="column is-3">
+                                <h6>Column is-3</h6>
+                                <img src="//placehold.it/400x400" alt="">
+                            </div>
+                            <div class="column is-6">
+                                <h6>Column is-6</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas praesentium harum, incidunt necessitatibus provident vel corporis rem illum et quaerat deserunt, veniam? Unde eaque amet cupiditate veritatis facilis, tempora minima.</p>
+                                <p><strong>Inventore voluptatem ipsa aut illum culpa?</strong></p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                    <li>Obcaecati, vero iure necessitatibus vel.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <h6>Column is-4</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laborum. Maiores voluptatum officia dolorum commodi quia pariatur ipsa, voluptates quibusdam ullam atque magni repellat numquam deserunt, sit hic dicta, doloremque!</p>
+                            </div>
+                            <div class="column is-4">
+                                <h6>Column is-4</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque dolorem fugit quod nulla voluptate perspiciatis earum natus quam commodi tenetur, consectetur veritatis, perferendis facere provident ea, voluptatum error corporis.</p>
+                            </div>
+                            <div class="column is-4">
+                                <h6>Column is-4</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas praesentium harum, incidunt necessitatibus provident vel corporis rem illum et quaerat deserunt, veniam? Unde eaque amet cupiditate veritatis facilis, tempora minima.</p>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-5">
+                                <h6>Column is-5</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laborum. Maiores voluptatum officia dolorum commodi quia pariatur ipsa, voluptates quibusdam ullam atque magni repellat numquam deserunt, sit hic dicta, doloremque!</p>
+                            </div>
+                            <div class="column is-7">
+                                <h6>Column is-7</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque dolorem fugit quod nulla voluptate perspiciatis earum natus quam commodi tenetur, consectetur veritatis, perferendis facere provident ea, voluptatum error corporis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="section" role="contentinfo">
+            <div class="container">
                 <div class="columns">
                     <div class="column">
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quibusdam ad quis at officia, blanditiis rerum nam consequatur perspiciatis eaque, debitis eius, id sequi. Dolores reprehenderit nesciunt id consequatur eum!</p>
-                        <p><button id="js-button" class="button">Click Me</button></p>
+                        <h1>Footer</h1>
                     </div>
-                    <div class="column">
-                        <h2>Iste earum hic voluptatibus incidunt illo totam ad ipsam explicabo fugit, at autem, pariatur. Suscipit, ipsam.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores delectus doloribus sint facere debitis beatae dolorem ex ad dignissimos, vero reprehenderit repellat maxime. Sapiente quos nulla ipsum tempore, quibusdam nihil.</p>
-                        <p>Ducimus perferendis ratione, fugit suscipit sapiente ad, voluptates saepe nostrum accusantium deserunt eum esse exercitationem ipsa alias, optio voluptatibus asperiores quod excepturi quos rem perspiciatis laborum accusamus. Aut, dignissimos, voluptas!</p>
-                        <p>Perferendis fugiat officiis, libero possimus non quo autem ad voluptates assumenda asperiores enim quisquam id quam deserunt alias officia, nisi est aspernatur sint eum suscipit ratione iste earum? Numquam, natus!</p>
+                    <div class="column is-2">
+                        <a href="//twitter.com/@alenabdula">@alenabdula</a>
+                        <a href="//github.com/alenabdula/germinate">GitHub</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
-<script src="js/app.js"></script>
+        </footer>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
 </body>
 </html>

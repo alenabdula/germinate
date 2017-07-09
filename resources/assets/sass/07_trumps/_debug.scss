@@ -10,11 +10,9 @@
         width: 100%;
         content: 'mobile-first: 0-543px';
         font-family: $family-monospace;
-        font-size: 65%;
-        letter-spacing: 1px;
-        text-align: center;
         background-color: $green;
-        color: $white;
+        text-indent: $space-normal;
+        z-index: $index-top;
         @include mq('min-width','baby') {
             content: 'baby: 544px - 767px';
             background-color: $blue;
@@ -28,8 +26,12 @@
             background-color: $lime;
         }
         @include mq('min-width','adult') {
-            content: 'adult: 1200px';
+            content: 'adult: 1200px - 1399px';
             background-color: $red;
+        }
+        @include mq('min-width','senior') {
+            content: 'senior: 1400px+';
+            background-color: $orange;
         }
     }
 }

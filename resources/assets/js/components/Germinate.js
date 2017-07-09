@@ -6,24 +6,14 @@ const Germinate = {
      * Run things on window ready event.
      */
     ready() {
-        this.print('Ready!');
-        this.buttonSayHallo();
+        console.log('Ready!', `Width:${this.width}`, `Height:${this.height}`);
     },
 
     /**
      * Run things on window resize event.
      */
     resized() {
-        this.print('Resized!', true);
-    },
-
-    /**
-     * Click button to say Hello.
-     */
-    buttonSayHallo() {
-        this.button.on('click', () => {
-            this.print('Hello');
-        });
+        console.log('Resized!', `Width:${this.width}`,`Height:${this.height}`);
     },
 
     /**
@@ -38,18 +28,6 @@ const Germinate = {
     },
 
     /**
-     * Logs information to browsers console.
-     */
-    print(text, withSize = false) {
-        let style = "color: #A4CE39; font-size: 1.2rem;";
-        if ( withSize ) {
-            console.log(`%cWidth: ${this.width}px`, style);
-            console.log(`%cHeight: ${this.height}px`, style);
-        }
-        console.log(`%c${text}`, style);
-    },
-
-    /**
      * Getter for window width.
      */
     get width() {
@@ -61,13 +39,6 @@ const Germinate = {
      */
     get height() {
         return $(window).height();
-    },
-
-    /**
-     * Component button.
-     */
-    get button() {
-        return $('#js-button');
     }
 
 };
