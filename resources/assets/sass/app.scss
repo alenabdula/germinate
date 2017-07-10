@@ -1,13 +1,8 @@
 //
-//  Settings
-//  Global Variables & Configuration
-@import '01_settings/variables';
-//
-//  Tools
-//  Collection of Function & Mixins
-@import '02_tools/functions';
-@import '02_tools/mixins';
-@import '02_tools/media-queries';
+//  Bootstrap utilities.
+//  01 - Settings - Global Variables & Configuration
+//  02 - Tools - Collection of Function, Media Queries & Mixins
+@import '_bootstrap';
 //
 //  Generic
 //  Ground Zero Styles & Normalization
@@ -38,50 +33,3 @@
 //  Helper Classes & Overrides
 @import '07_trumps/trump';
 @import '07_trumps/debug';
-
-#app {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    #header, #footer {
-        background-color: $grey-light;
-    }
-    #nav {
-        display: flex;
-        flex-direction: column;
-        font-size: 90%;
-        @include mq('min-width', 'toddler') {
-            flex-direction: row;
-            .nav-item {
-                display: block;
-                &:not(:last-child) {
-                    border-right: 1px solid $grey-dark;
-                    margin-right: $space-normal;
-                    padding-right: $space-normal;
-                }
-            }
-        }
-    }
-    #main {
-        flex: 1;
-    }
-    #toc {
-        margin-top: $space-normal;
-        margin-bottom: $space-small;
-        font-size: $size-7;
-        color: $grey-dark;
-    }
-    #toc-button {
-        position: fixed;
-        top: $space-large;
-        right: $space-large;
-        z-index: $index-middle;
-    }
-    .heading {
-        font-size: $size-7;
-        color: $grey;
-        border-bottom: 1px solid $border;
-        margin-bottom: $space-normal;
-    }
-}
