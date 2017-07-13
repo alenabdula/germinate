@@ -14,7 +14,7 @@
     }
 </script>
 <style lang="scss">
-    @import './../../../../assets/sass/_bootstrap.scss';
+    @import '~GlobalSass';
     #header {
         background-color: $grey-1;
         margin-bottom: $space-larger;

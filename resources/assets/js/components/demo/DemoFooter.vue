@@ -24,7 +24,7 @@
     }
 </script>
 <style lang="scss">
-    @import './../../../../assets/sass/_bootstrap.scss';
+    @import '~GlobalSass';
     #footer {
         background-color: $grey-1;
     }

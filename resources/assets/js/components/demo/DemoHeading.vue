@@ -16,7 +16,7 @@
     }
 </script>
 <style lang="scss">
-    @import './../../../../assets/sass/_bootstrap.scss';
+    @import '~GlobalSass';
     .heading {
         display: flex;
         justify-content: space-between;

@@ -25,7 +25,7 @@
     }
 </script>
 <style lang="scss">
-    @import './../../../../assets/sass/_bootstrap.scss';
+    @import '~GlobalSass';
     .flex-footer {
         width: 100%;
         height: 100vh;

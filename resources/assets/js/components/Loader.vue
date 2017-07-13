@@ -13,7 +13,7 @@
     }
 </script>
 <style lang="scss">
-    @import './../../sass/_bootstrap.scss';
+    @import '~GlobalSass';
     @keyframes spinAround {
         from { transform: rotate(0deg); }
         to   { transform: rotate(359deg); }

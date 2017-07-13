@@ -14,5 +14,5 @@
     export default {}
 </script>
 <style lang="scss">
-    @import './../../../../assets/sass/_bootstrap.scss';
+    @import '~GlobalSass';
 </style>
