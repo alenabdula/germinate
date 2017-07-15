@@ -1,13 +1,24 @@
-window.Vue   = require('vue');
+/**
+ * VueJS.
+ */
+window.Vue = require('vue');
+/**
+ * Event VueJS instance.
+ */
 window.Event = new Vue();
-
+/**
+ * VueScrollTo.
+ */
 const VueScrollTo = require('vue-scrollto');
 Vue.use(VueScrollTo);
-
-/* Demo VueJS components. */
+/**
+ * VueJS demo components.
+ */
 Vue.component('demo', require('./components/demo/Demo.vue'));
 Vue.component('demo-heading', require('./components/demo/DemoHeading.vue'));
-
+/**
+ * VueJS application instance.
+ */
 const app = new Vue({
     el: '#app',
     data: {
@@ -16,7 +27,6 @@ const app = new Vue({
     components: {
         'loader': require('./components/Loader.vue'),
     },
-    computed: {},
     methods: {
         /* Fetch API data from server. */
         fetch() {

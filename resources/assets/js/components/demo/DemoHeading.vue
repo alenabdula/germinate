@@ -18,11 +18,13 @@
 <style lang="scss">
     @import '~GlobalSass';
     .heading {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid $text;
+        border-bottom: 1px solid $grey-light;
         margin-bottom: $space-normal;
         padding-bottom: $space-small;
-        text-align: right;
+        color: $grey;
+        @include mq('min-width', 'toddler') {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 </style>

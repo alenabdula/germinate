@@ -17,7 +17,7 @@
     @import '~GlobalSass';
     #header {
         background-color: $grey-1;
-        margin-bottom: $space-larger;
+        padding-bottom: 0;
         h1.header-brand {
             margin-bottom: $space-normal;
             font-size: $size-2;

@@ -1,13 +1,11 @@
 <template>
-    <div>
-        <transition name="slide-fade">
-            <div v-if="loaded" class="flex-footer">
-                <demo-header></demo-header>
-                <demo-main></demo-main>
-                <demo-footer></demo-footer>
-            </div>
-        </transition>
-    </div>
+    <transition name="slide-fade">
+        <div v-if="loaded" class="flex-footer">
+            <demo-header></demo-header>
+            <demo-main></demo-main>
+            <demo-footer></demo-footer>
+        </div>
+    </transition>
 </template>
 <script>
     export default {

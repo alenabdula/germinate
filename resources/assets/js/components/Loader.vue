@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <transition name="fade">
-            <div class="loader" v-if="!loaded">
-                <div class="spinner"></div>
-            </div>
-        </transition>
-    </div>
+    <transition name="fade">
+        <div class="loader" v-if="!loaded">
+            <div class="spinner"></div>
+        </div>
+    </transition>
 </template>
 <script>
     export default {
