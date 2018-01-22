@@ -1,12 +1,8 @@
 //
-// Debug.
-$debug: false;
-
-//
 // Z-index.
-$index-top   : 3000;
-$index-middle: 2000;
-$index-bottom: 1000;
+$z-top   : 3000;
+$z-middle: 2000;
+$z-bottom: 1000;
 
 // Miscellaneous.
 $easing: cubic-bezier(0.57, -0.24, 0.49, 1.56);
@@ -17,10 +13,11 @@ $transition: all $speed $easing;
 
 //
 // Spacing.
+$space-xsmall: 0.25rem;
 $space-small : 0.5rem;
-$space-normal: 1rem;
-$space-large : 2rem;
-$space-larger: 4rem;
+$space       : 1rem;
+$space-large : 1.25rem;
+$space-xlarge: 1.5rem;
 
 //
 // Radius.
@@ -79,6 +76,7 @@ $danger : $red;
 $colors: (
     "white"  : $white,
     "grey"   : $grey,
+    "dark"  : $grey-8,
     "black"  : $black,
     "primary": $primary,
     "info"   : $info,
@@ -89,13 +87,13 @@ $colors: (
 
 //
 // Brand colors.
-$brand-color-primary  : $lime;
-$brand-color-secondary: $purple;
+$brand-color-primary  : $purple;
+$brand-color-secondary: $lime;
 
 //
 // Site colors.
-$background : $white;
-$text       : $black;
+$background : $grey-0;
+$text       : $grey-8;
 $text-invert: findColorInvert($text);
 $text-light : $grey;
 $text-strong: $grey-darker;
@@ -107,15 +105,16 @@ $border-hover: $grey-light;
 
 //
 // Link colors.
-$link        : $primary;
-$link-visited: $primary;
-$link-hover  : $grey-darker;
-$link-active : $grey-darker;
+$link        : $brand-color-primary;
+$link-visited: $brand-color-primary;
+$link-hover  : darken($brand-color-primary, 10%);
+$link-active : darken($brand-color-primary, 10%);
 
 //
 // Typography.
 $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$family-monospace: "Inconsolata", "Consolas", "Monaco", monospace;
+$family-monospace: SFMono-Regular, Inconsolata, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: $family-monospace;
 
 //
 // Font sizing.

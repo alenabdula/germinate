@@ -10,7 +10,7 @@ mix.webpackConfig({
              * Alias for importing Sass variables, functions and mixins,
              * @import '~GlobalSass';
              */
-            'GlobalSass': path.resolve('resources/assets/sass/_bootstrap.scss'),
+            'GlobalSass': path.resolve('resources/assets/sass/bootstrap.scss'),
         }
     },
 });
@@ -27,6 +27,7 @@ mix.disableNotifications()
     * Sass.
     */
    .sass('resources/assets/sass/app.scss', 'public/css')
+   .sass('resources/assets/sass/shared.scss', 'public/css')
    /**
     * BrowserSync.
     */

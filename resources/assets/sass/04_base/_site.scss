@@ -9,14 +9,16 @@ html {
     overflow-x: hidden;
     overflow-y: scroll;
     text-rendering: optimizeLegibility;
+    &.wf-active {
+        #main {
+            font-family: "adobe-caslon-pro";
+        }
+    }
 }
 
 body {
-    margin: 0;
-    font-family: $family-sans-serif;
-    font-weight: $weight-normal;
-    font-size: 100%;
-    line-height: 1.5;
+    font-family: $font-family-base;
+    line-height: 1.64;
     background-color: transparent;
     color: $text;
 }

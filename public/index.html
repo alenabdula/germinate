@@ -5,33 +5,35 @@
     <title>Germinate</title>
     <meta name="description" content="Germinate this!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- icons -->
+
+    <!-- Icons -->
     <link rel="apple-touch-startup-image" href="img/apple-touch-startup-image-640x920.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
     <link rel="icon" sizes="192x192" href="img/icon-192x192.png">
-    <!-- styling -->
+
+    <!-- Styling -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="theme-color" content="#82c91e">
     <meta name="msapplication-navbutton-color" content="#82c91e">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <!-- CSS -->
+    <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/app.css">
+
     <!-- JavaScript -->
     <script type="text/javascript">
-        /* Is JavaScript is available? */
         document.documentElement.className = document.documentElement.className.replace('no-js', '');
         document.documentElement.className += 'js-enhanced';
     </script>
 </head>
 <body>
-    <!-- application -->
+    <!-- Application -->
     <div id="app">
-        <!-- loader -->
-        <loader :loaded="loaded"></loader>
-        <!-- demo -->
-        <demo :loaded="loaded"></demo>
+        <germinate></germinate>
     </div>
+
     <!-- JavaScript -->
     <script src="js/app.js"></script>
 </body>

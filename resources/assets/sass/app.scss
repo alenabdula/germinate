@@ -2,34 +2,6 @@
 //  Bootstrap utilities.
 //  01 - Settings - Global Variables & Configuration
 //  02 - Tools - Collection of Function, Media Queries & Mixins
-@import '_bootstrap';
-//
-//  Generic
-//  Ground Zero Styles & Normalization
-@import '03_generic/viewport';
-@import '03_generic/clearfix';
-@import '03_generic/resets';
-//
-//  Base
-//  HTML elements without classes
-@import '04_base/site';
-@import '04_base/elements';
-@import '04_base/images';
-@import '04_base/links';
-@import '04_base/typography';
-//
-//  Objects
-//  Design-free patterns
-@import '05_objects/container';
-@import '05_objects/section';
-@import '05_objects/grid';
-//
-//  Components
-//  Designed & Styles Components
-@import '06_components/content';
-@import '06_components/button';
-//
-//  Trumps
-//  Helper Classes & Overrides
-@import '07_trumps/trump';
-@import '07_trumps/debug';
+@import 'bootstrap';
+
+#app {}

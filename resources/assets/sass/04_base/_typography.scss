@@ -1,12 +1,13 @@
 //
 // Typography
-
 ::selection {
     background: lighten($primary, 20%);
 }
 
 abbr[title] {
+    text-decoration: none;
     border-bottom: 2px dotted $primary;
+    padding-bottom: 1px;
 }
 
 b, strong {
@@ -22,7 +23,7 @@ dfn {
 }
 
 mark {
-    background: lighten($primary, 20%);
+    background: lighten($primary, 18%);
 }
 
 small {
@@ -50,7 +51,7 @@ hr {
 }
 
 kbd {
-    background-color: whitesmoke;
+    background-color: $grey-2;
     border: 1px solid $border;
     padding: 0.25rem;
     border-radius: $radius;
@@ -58,7 +59,7 @@ kbd {
 
 samp,
 code {
-    background-color: whitesmoke;
+    background-color: $grey-2;
     color: $red;
     display: block;
     padding: 1rem;
