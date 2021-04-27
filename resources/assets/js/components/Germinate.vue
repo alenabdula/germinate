@@ -36,12 +36,14 @@
         </table>
     </div>
 </template>
+
 <script>
     import Dimensions from '../mixins/Dimensions.js';
     export default {
         mixins: [Dimensions],
     }
 </script>
+
 <style lang="scss">
     @import '~GlobalSass';
     #germinate {

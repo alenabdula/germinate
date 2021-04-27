@@ -1,4 +1,5 @@
-const { mix } = require('laravel-mix');
+let mix = require('laravel-mix');
+let path = require("path");
 
 /**
  * Custom webpack configurations.
@@ -22,7 +23,7 @@ mix.disableNotifications()
    /**
     * JavaScript.
     */
-   .js('resources/assets/js/app.js', 'public/js')
+   .js('resources/assets/js/app.js', 'public/js').vue()
    /**
     * Sass.
     */
