@@ -7,10 +7,12 @@ export default {
             }
         }
     },
+    emits: ['dimensions'],
     methods: {
         runDimensions() {
             this.getDimensions().then((data) => {
-                Event.$emit('dimensions', data);
+                this.dimensions.window = data.window;
+                this.dimensions.document = data.document;
             });
         },
         getDimensions() {
@@ -42,10 +44,6 @@ export default {
         this.runDimensions();
         this.resizedDimensions(() => {
             this.runDimensions();
-        });
-        Event.$on('dimensions', (response) => {
-            this.dimensions.window = response.window;
-            this.dimensions.document = response.document;
         });
     },
 }

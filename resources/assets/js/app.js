@@ -1,7 +1,6 @@
-import Vue from 'vue';
+import { createApp } from 'vue'
+import Germinate from './components/Germinate.vue'
 
-window.Event = new Vue({});
-
-Vue.component('germinate-app', require('./components/Germinate.vue').default);
-
-const app = new Vue({}).$mount("#app");
+const app = createApp({});
+app.component('germinate-app', Germinate);
+app.mount('#app');
