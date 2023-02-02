@@ -11,8 +11,9 @@ export default {
     methods: {
         runDimensions() {
             this.getDimensions().then((data) => {
-                this.dimensions.window = data.window;
-                this.dimensions.document = data.document;
+                // this.dimensions.window = data.window;
+                // this.dimensions.document = data.document;
+                this.Event.emit('dimensions', data);
             });
         },
         getDimensions() {
@@ -44,6 +45,10 @@ export default {
         this.runDimensions();
         this.resizedDimensions(() => {
             this.runDimensions();
+        });
+        this.Event.on('dimensions', (response) => {
+            this.dimensions.window = response.window;
+            this.dimensions.document = response.document;
         });
     },
 }
